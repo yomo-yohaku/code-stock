@@ -49,8 +49,8 @@ function setVideoSource() {
   const type = isSp ? "sp" : "pc";
   // デバイスタイプに応じた動画パスを設定
   const newSrc = isSp
-    ? "/assets/video/kv_movie_sp.mp4"
-    : "/assets/video/kv_movie_pc.mp4";
+    ? "./assets/video/kv_movie_sp.mp4"
+    : "./assets/video/kv_movie_pc.mp4";
   // デバイスタイプが変わった場合のみ動画ソースを切り替える
   if (currentType !== type) {
     video.src = newSrc;
