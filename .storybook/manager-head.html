@@ -1,0 +1,23 @@
+<style>
+  /* Interactionsパネルのタブボタンを非表示 */
+  [id^="tabbutton-storybook-interactions-panel"] {
+    display: none !important;
+  }
+
+  /* Interactionsパネルを非表示 */
+  div:has(> .css-49woof) {
+    display: none !important;
+  }
+
+  /* Source Codeパネルを表示 */
+  div:has(> .css-13o7eu2) {
+    display: block !important;
+  }
+
+  /* Source Codeパネルの下層タブ */
+  .css-1bdj47z {
+    overflow: auto !important;
+    position: absolute !important;
+    inset: 40px 0 0 !important;
+  }
+</style>

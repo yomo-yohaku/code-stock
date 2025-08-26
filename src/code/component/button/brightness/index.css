@@ -1,0 +1,20 @@
+.c-button-brightness {
+  display: grid;
+  justify-content: center;
+  padding: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #ff6900;
+  border-radius: calc(infinity * 1px);
+}
+
+@media (any-hover: hover) {
+  .c-button-brightness {
+    transition: filter 0.3s;
+  }
+
+  .c-button-brightness:hover {
+    filter: brightness(1.25);
+  }
+}
