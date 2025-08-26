@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "deploy": "gh-pages -d storybook-static"
+    "deploy": "npm run build-storybook && gh-pages -d storybook-static"
   },
   "devDependencies": {
     "@jls-digital/storybook-addon-code": "^2.0.0",
