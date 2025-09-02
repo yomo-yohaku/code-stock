@@ -99,7 +99,7 @@ const n=`.p-cards-event {
   padding: 12px;
   font-size: 14px;
   font-weight: 700;
-  border-radius: calc(infinity * 1px);
+  border-radius: 9999px;
 }
 
 .c-card-event__button.--detail .c-card-event__button-link {
@@ -254,7 +254,7 @@ const n=`.p-cards-event {
   padding: 12px;
   font-size: 14px;
   font-weight: 700;
-  border-radius: calc(infinity * 1px);
+  border-radius: 9999px;
 }
 
 .c-card-event-2__button.--detail .c-card-event-2__button-link {

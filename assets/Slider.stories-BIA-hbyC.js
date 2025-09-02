@@ -1,4 +1,4 @@
-/* empty css                */import{c as jt}from"./index-O9w-lcwG.js";function Ht(n,t){for(var e=0;e<t.length;e++){var r=t[e];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(n,r.key,r)}}function Yt(n,t,e){return t&&Ht(n.prototype,t),Object.defineProperty(n,"prototype",{writable:!1}),n}/*!
+/* empty css                */import{c as jt}from"./index-BN8ke99c.js";function Ht(n,t){for(var e=0;e<t.length;e++){var r=t[e];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(n,r.key,r)}}function Yt(n,t,e){return t&&Ht(n.prototype,t),Object.defineProperty(n,"prototype",{writable:!1}),n}/*!
  * Splide.js
  * Version  : 4.1.4
  * License  : MIT
@@ -774,7 +774,7 @@
 
 .p-splide-card02 .splide__controller {
   display: flex;
-  gap: 16px;
+  gap: 24px;
   align-items: center;
   margin-top: 32px;
 }
@@ -785,7 +785,7 @@
   flex-wrap: wrap;
   gap: 12px 8px;
   justify-content: flex-start;
-  margin-right: auto;
+  margin-left: auto;
 }
 
 .p-splide-card02 .splide__pagination li {
@@ -897,7 +897,7 @@ const options02 = {
   perPage: 1,
   focus: 0,
   omitEnd: true,
-  fixedWidth: "240px",
+  fixedWidth: "300px",
   gap: 8,
   breakpoints: {
     1024: {

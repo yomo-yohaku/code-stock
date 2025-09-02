@@ -1,4 +1,4 @@
-/* empty css                */import{c as a}from"./index-O9w-lcwG.js";const e=`<div class="tw:bg-slate-200 tw:p-[16px] tw:md:p-[40px]">
+/* empty css                */import{c as a}from"./index-BN8ke99c.js";const e=`<div class="tw:bg-slate-200 tw:p-[16px] tw:md:p-[40px]">
   <div class="p-cards-event">
     <div class="c-card-event">
       <a href="#" class="c-card-event__link">
