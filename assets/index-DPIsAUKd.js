@@ -1,21 +1,21 @@
-const n=`.p-cards-event {
+const n=`.p-cards-event01 {
   display: grid;
   gap: 8px;
   max-width: 880px;
   margin-inline: auto;
 }
 @media screen and (min-width: 768px) {
-  .p-cards-event {
+  .p-cards-event01 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media screen and (min-width: 1024px) {
-  .p-cards-event {
+  .p-cards-event01 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-.c-card-event {
+.c-card-event01 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -23,49 +23,49 @@ const n=`.p-cards-event {
   background-color: #fff;
 }
 @media screen and (min-width: 768px) {
-  .c-card-event {
+  .c-card-event01 {
     padding: 24px;
   }
 }
 
-.c-card-event__amount {
+.c-card-event01__amount {
   aspect-ratio: 3 / 2;
   overflow: hidden;
   border-radius: 8px;
 }
 
-.c-card-event__image {
+.c-card-event01__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.c-card-event__wrap {
+.c-card-event01__wrap {
   margin-top: 16px;
 }
 
-.c-card-event__title {
+.c-card-event01__title {
   font-size: 14px;
   font-weight: 700;
 }
 @media screen and (min-width: 768px) {
-  .c-card-event__title {
+  .c-card-event01__title {
     font-size: 16px;
   }
 }
 
-.c-card-event__text {
+.c-card-event01__text {
   margin-top: 8px;
   font-size: 13px;
   line-height: 1.5;
 }
 @media screen and (min-width: 768px) {
-  .c-card-event__text {
+  .c-card-event01__text {
     font-size: 14px;
   }
 }
 
-.c-card-event__text.--omission {
+.c-card-event01__text.--omission {
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -73,27 +73,27 @@ const n=`.p-cards-event {
   -webkit-box-orient: vertical;
 }
 
-.c-card-event__schedule {
+.c-card-event01__schedule {
   margin-top: 4px;
   font-size: 13px;
   font-weight: 700;
   line-height: 1.5;
 }
 @media screen and (min-width: 768px) {
-  .c-card-event__schedule {
+  .c-card-event01__schedule {
     margin-top: 8px;
     font-size: 14px;
   }
 }
 
-.c-card-event__buttons {
+.c-card-event01__buttons {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
   margin-top: 16px;
 }
 
-.c-card-event__button-link {
+.c-card-event01__button-link {
   display: grid;
   justify-content: center;
   padding: 12px;
@@ -102,77 +102,77 @@ const n=`.p-cards-event {
   border-radius: 9999px;
 }
 
-.c-card-event__button.--detail .c-card-event__button-link {
+.c-card-event01__button.--detail .c-card-event01__button-link {
   color: #000;
   background-color: #fff;
   border: 1px solid #cad5e2;
 }
 
-.c-card-event__button.--reservation .c-card-event__button-link {
+.c-card-event01__button.--reservation .c-card-event01__button-link {
   color: #fff;
   background-color: #ff6900;
   border: 1px solid #ff6900;
 }
 
 @media (any-hover: hover) {
-  .c-card-event__image {
+  .c-card-event01__image {
     transition: scale 0.3s;
   }
-  .c-card-event__link:hover .c-card-event__image {
+  .c-card-event01__link:hover .c-card-event01__image {
     scale: 1.05;
   }
 
-  .c-card-event__button.--detail .c-card-event__button-link {
+  .c-card-event01__button.--detail .c-card-event01__button-link {
     transition: color 0.3s;
   }
-  .c-card-event__button.--reservation .c-card-event__button-link {
+  .c-card-event01__button.--reservation .c-card-event01__button-link {
     transition: filter 0.3s;
   }
-  .c-card-event__button.--detail .c-card-event__button-link:hover {
+  .c-card-event01__button.--detail .c-card-event01__button-link:hover {
     color: #ff6900;
   }
-  .c-card-event__button.--reservation .c-card-event__button-link:hover {
+  .c-card-event01__button.--reservation .c-card-event01__button-link:hover {
     filter: brightness(1.25);
   }
 }
 
-.p-cards-event-2 {
+.p-cards-event02 {
   display: grid;
   gap: 8px;
   max-width: 880px;
   margin-inline: auto;
 }
 @media screen and (min-width: 768px) {
-  .p-cards-event-2 {
+  .p-cards-event02 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media screen and (min-width: 1024px) {
-  .p-cards-event-2 {
+  .p-cards-event02 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-.c-card-event-2 {
+.c-card-event02 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #fff;
 }
 @media screen and (min-width: 768px) {
-  .c-card-event-2 {
+  .c-card-event02 {
     padding: 24px;
   }
 }
 
-.c-card-event-2__link {
+.c-card-event02__link {
   display: grid;
   grid-template-columns: 50% 1fr;
   gap: 12px;
   padding: 12px;
 }
 @media screen and (min-width: 768px) {
-  .c-card-event-2__link {
+  .c-card-event02__link {
     display: block;
     grid-template-columns: none;
     gap: 0;
@@ -180,67 +180,67 @@ const n=`.p-cards-event {
   }
 }
 
-.c-card-event-2__amount {
+.c-card-event02__amount {
   aspect-ratio: 3 / 2;
   overflow: hidden;
   border-radius: 8px;
 }
 
-.c-card-event-2__image {
+.c-card-event02__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.c-card-event-2__wrap {
+.c-card-event02__wrap {
   margin-top: 0;
 }
 @media screen and (min-width: 768px) {
-  .c-card-event-2__wrap {
+  .c-card-event02__wrap {
     margin-top: 16px;
   }
 }
 
-.c-card-event-2__title {
+.c-card-event02__title {
   font-size: 13px;
   font-weight: 700;
 }
 @media screen and (min-width: 768px) {
-  .c-card-event-2__title {
+  .c-card-event02__title {
     font-size: 16px;
   }
 }
 
-.c-card-event-2__text {
+.c-card-event02__text {
   display: none;
   margin-top: 8px;
   font-size: 14px;
   line-height: 1.5;
 }
 @media screen and (min-width: 768px) {
-  .c-card-event-2__text {
+  .c-card-event02__text {
     display: block;
   }
 }
 
-.c-card-event-2__schedule {
+.c-card-event02__schedule {
   margin-top: 4px;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.5;
 }
 @media screen and (min-width: 768px) {
-  .c-card-event-2__schedule {
+  .c-card-event02__schedule {
     margin-top: 8px;
     font-size: 14px;
   }
 }
 
-.c-card-event-2__buttons {
+.c-card-event02__buttons {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .c-card-event-2__buttons {
+  .c-card-event02__buttons {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
@@ -248,7 +248,7 @@ const n=`.p-cards-event {
   }
 }
 
-.c-card-event-2__button-link {
+.c-card-event02__button-link {
   display: grid;
   justify-content: center;
   padding: 12px;
@@ -257,36 +257,36 @@ const n=`.p-cards-event {
   border-radius: 9999px;
 }
 
-.c-card-event-2__button.--detail .c-card-event-2__button-link {
+.c-card-event02__button.--detail .c-card-event02__button-link {
   color: #000;
   background-color: #fff;
   border: 1px solid #cad5e2;
 }
 
-.c-card-event-2__button.--reservation .c-card-event-2__button-link {
+.c-card-event02__button.--reservation .c-card-event02__button-link {
   color: #fff;
   background-color: #ff6900;
   border: 1px solid #ff6900;
 }
 
 @media (any-hover: hover) {
-  .c-card-event-2__image {
+  .c-card-event02__image {
     transition: scale 0.3s;
   }
-  .c-card-event-2__link:hover .c-card-event-2__image {
+  .c-card-event02__link:hover .c-card-event02__image {
     scale: 1.05;
   }
 
-  .c-card-event-2__button.--detail .c-card-event-2__button-link {
+  .c-card-event02__button.--detail .c-card-event02__button-link {
     transition: color 0.3s;
   }
-  .c-card-event-2__button.--reservation .c-card-event-2__button-link {
+  .c-card-event02__button.--reservation .c-card-event02__button-link {
     transition: filter 0.3s;
   }
-  .c-card-event-2__button.--detail .c-card-event-2__button-link:hover {
+  .c-card-event02__button.--detail .c-card-event02__button-link:hover {
     color: #ff6900;
   }
-  .c-card-event-2__button.--reservation .c-card-event-2__button-link:hover {
+  .c-card-event02__button.--reservation .c-card-event02__button-link:hover {
     filter: brightness(1.25);
   }
 }

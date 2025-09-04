@@ -23,7 +23,6 @@
 }
 
 .c-button-brightness.--arrow {
-  display: grid;
   grid-template-columns: 1fr auto 1fr;
   column-gap: 8px;
   align-items: center;
@@ -45,18 +44,17 @@
   mask-size: contain;
 }
 
-.c-button-brightness[target=_blank] {
-  display: grid;
+.c-button-brightness[target="_blank"] {
   grid-template-columns: 1fr auto 1fr;
   column-gap: 8px;
   align-items: center;
 }
 
-.c-button-brightness[target=_blank]::before {
+.c-button-brightness[target="_blank"]::before {
   content: "";
 }
 
-.c-button-brightness[target=_blank]::after {
+.c-button-brightness[target="_blank"]::after {
   justify-self: end;
   width: 16px;
   height: 16px;
@@ -98,19 +96,7 @@
   border-radius: 9999px;
 }
 
-@media (any-hover: hover) {
-  .c-button-inversion {
-    transition: background-color 0.3s;
-  }
-
-  .c-button-inversion:hover {
-    color: #fff;
-    background-color: #ff6900;
-  }
-}
-
 .c-button-inversion.--arrow {
-  display: grid;
   grid-template-columns: 1fr auto 1fr;
   column-gap: 8px;
   align-items: center;
@@ -133,15 +119,22 @@
 }
 
 @media (any-hover: hover) {
+  .c-button-inversion {
+    transition: background-color 0.3s;
+  }
+
+  .c-button-inversion:hover {
+    color: #fff;
+    background-color: #ff6900;
+  }
+
   .c-button-inversion.--arrow:hover::after {
     background-color: #fff;
   }
 }
 `,i=`<div class="tw:grid tw:gap-[16px] tw:m-[16px]">
   <div class="tw:max-w-[320px]">
-    <a href="#" class="c-button-gradation">
-      テキストテキストテキスト
-    </a>
+    <a href="#" class="c-button-gradation"> テキストテキストテキスト </a>
   </div>
 
   <div class="tw:max-w-[320px]">
@@ -161,9 +154,9 @@
   color: #fff;
   background-image: linear-gradient(
     135deg,
-    #FB2C36 0%,
-    #FF6900 50%,
-    #FB2C36 100%
+    #fb2c36 0%,
+    #ff6900 50%,
+    #fb2c36 100%
   );
   background-position: 0% center;
   background-size: 200% 100%;
@@ -199,9 +192,9 @@
 .c-button-gradation.--blue {
   background-image: linear-gradient(
     135deg,
-    #155DFC 0%,
-    #4F39F6 50%,
-    #155DFC 100%
+    #155dfc 0%,
+    #4f39f6 50%,
+    #155dfc 100%
   );
 }
 `,g={title:"Component/Button"},n={render:()=>`
