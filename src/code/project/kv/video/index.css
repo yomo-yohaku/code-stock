@@ -1,0 +1,25 @@
+.p-kv-video {
+  position: relative;
+}
+
+.p-kv-video__hero {
+  padding-inline: 16px 0;
+}
+@media screen and (min-width: 768px) {
+  .p-kv-video__hero {
+    padding-inline: 24px;
+  }
+}
+
+.p-kv-video__hero video {
+  width: 100%;
+  aspect-ratio: 750 / 1100;
+  object-fit: cover;
+  border-radius: 24px 0 0 24px;
+}
+@media screen and (min-width: 768px) {
+  .p-kv-video__hero video {
+    aspect-ratio: 1600 / 900;
+    border-radius: 40px;
+  }
+}

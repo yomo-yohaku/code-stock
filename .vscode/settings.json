@@ -1,0 +1,21 @@
+{
+  "stylelint.validate": ["css"], // stylelintによるvalidateを有効化
+  "[css]": {
+    "editor.codeActionsOnSave": {
+      // 自動修正を保存時に自動的に適用するための設定
+      "source.fixAll.stylelint": "explicit"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // 既定のフォーマッタを定義
+    "editor.formatOnSave": true // 保存時に自動でコードフォーマットする
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // 既定のフォーマッタを定義
+    "editor.formatOnSave": true // 保存時に自動でコードフォーマットする
+  },
+
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // 既定のフォーマッタを定義
+    "editor.formatOnSave": true // 保存時に自動でコードフォーマットする
+  }
+}

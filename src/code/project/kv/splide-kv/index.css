@@ -1,0 +1,83 @@
+.p-kv-splide .p-kv-splide__slide-image img {
+  transform: scale(1.05);
+  transition: 7s ease-out;
+}
+
+.p-kv-splide .splide__slide[class*="-active"] .p-kv-splide__slide-image img {
+  transform: scale(1);
+}
+
+.p-kv-splide .p-kv-splide__slide-fraction {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+@media screen and (min-width: 768px) {
+  .p-kv-splide .p-kv-splide__slide-fraction {
+    bottom: 32px;
+    left: 32px;
+  }
+}
+
+.p-kv-splide .splide__fraction {
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+
+  --slide-fraction-size: 64px;
+}
+@media screen and (min-width: 768px) {
+  .p-kv-splide .splide__fraction {
+    --slide-fraction-size: 96px;
+  }
+}
+
+.p-kv-splide .splide__fraction .circle {
+  display: block;
+  width: var(--slide-fraction-size);
+  height: var(--slide-fraction-size);
+  transform: rotate(-90deg);
+}
+
+.p-kv-splide .splide__fraction .circle svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+}
+
+.p-kv-splide .splide__fraction .circle-01 {
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 1px;
+}
+
+.p-kv-splide .splide__fraction .circle-02 {
+  stroke: #ff6900;
+  stroke-width: 2px;
+  stroke-dasharray: 201.056px;
+  stroke-dashoffset: 201.056px;
+}
+
+.p-kv-splide .splide__slide[class*="-active"] .splide__fraction .circle-02 {
+  animation: p-kv-splide-circle linear both;
+}
+
+@keyframes p-kv-splide-circle {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.p-kv-splide .splide__fraction .current {
+  position: absolute;
+  inset: 0;
+  width: var(--slide-fraction-size);
+  font-size: 24px;
+  line-height: var(--slide-fraction-size);
+  color: #ff6900;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .p-kv-splide .splide__fraction .current {
+    font-size: 32px;
+  }
+}
