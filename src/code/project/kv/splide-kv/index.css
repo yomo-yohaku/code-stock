@@ -1,9 +1,18 @@
-.p-kv-splide .p-kv-splide__slide-image img {
+.p-kv-splide .p-kv-splide__slide-amount {
+  width: 100%;
+  max-height: 800px;
+  aspect-ratio: 1552 / 872;
+}
+
+.p-kv-splide .p-kv-splide__slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transform: scale(1.05);
   transition: 7s ease-out;
 }
 
-.p-kv-splide .splide__slide[class*="-active"] .p-kv-splide__slide-image img {
+.p-kv-splide .splide__slide[class*="-active"] .p-kv-splide__slide-image {
   transform: scale(1);
 }
 

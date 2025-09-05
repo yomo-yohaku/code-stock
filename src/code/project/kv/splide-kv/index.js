@@ -1,6 +1,6 @@
 (function () {
-  const slideDisplayDuration = 7000; // デフォルトのスライド表示時間
-  const kv01_selector = ".js-kv-splide .splide";
+  const DEFAULT_INTERVAL = 7000; // スライドのデフォルト表示時間（ミリ秒）
+  const KV_SELECTOR = ".js-kv-splide .splide";
 
   function createFractionEl() {
     return `
@@ -14,20 +14,18 @@
     `;
   }
 
-  // 各スライドに設定された data-splide-interval 属性から表示時間を取得
-  // もし属性がなければデフォルトのスライド表示時間を使う
+  // data-splide-interval 属性があればその値、なければデフォルト
   function getSlideDelays(slides, defaultDelay) {
-    return Array.prototype.map.call(slides, (el) => {
-      const attr = el.getAttribute("data-splide-interval");
-      return attr !== null ? Number(attr) : defaultDelay;
-    });
+    return Array.from(
+      slides,
+      (el) => Number(el.dataset.splideInterval) || defaultDelay,
+    );
   }
 
   function setupFractions(slides, fractions, slideDelays) {
-    for (let i = 0; i < slides.length; i++) {
-      const slideEl = slides[i];
+    slides.forEach((slideEl, i) => {
       const fractionEl = fractions[i];
-      if (!fractionEl) continue;
+      if (!fractionEl) return;
 
       if (!fractionEl.querySelector(".circle")) {
         fractionEl.insertAdjacentHTML("beforeend", createFractionEl());
@@ -37,42 +35,19 @@
       const circle02 = fractionEl.querySelector(".circle-02");
       const current = fractionEl.querySelector(".current");
 
-      if (img) {
-        img.style.transitionDuration = `${slideDelays[i]}ms`;
-      }
-      if (circle02) {
-        circle02.style.animationDuration = `${slideDelays[i]}ms`;
-      }
-      if (current) {
-        current.textContent = String(i + 1).padStart(2, "0");
-      }
-    }
+      img && (img.style.transitionDuration = `${slideDelays[i]}ms`);
+      circle02 && (circle02.style.animationDuration = `${slideDelays[i]}ms`);
+      current && (current.textContent = String(i + 1).padStart(2, "0"));
+    });
   }
 
-  /**
-   * Splideのintervalを公式APIで変更する
-   * @param {Splide} splide
-   * @param {number} interval
-   */
   function setSplideInterval(splide, interval) {
-    // Splide 4.x 以降は setInterval メソッドがある
-    if (typeof splide.Components.Autoplay?.setInterval === "function") {
-      splide.Components.Autoplay.setInterval(interval);
-    } else if (splide.options) {
-      // 非推奨: 直接optionsを書き換える
+    const autoplay = splide.Components.Autoplay;
+    if (autoplay?.setInterval) {
+      autoplay.setInterval(interval);
+    } else {
       splide.options.interval = interval;
     }
-  }
-
-  /**
-   * プログレスバー更新関数
-   * @param {number} index
-   */
-  function updateProgress(index) {
-    // 必要に応じてここでプログレスバーの更新処理を実装
-    // 例: 各スライドの.circle-02のアニメーションをリセットするなど
-    // 今回はダミー実装
-    // console.log("Progress update:", index);
   }
 
   function initSplideKV() {
@@ -80,36 +55,31 @@
     const fractions = document.querySelectorAll(
       ".js-kv-splide .splide__fraction",
     );
-    const slideDelays = getSlideDelays(slides, slideDisplayDuration);
+    const slideDelays = getSlideDelays(slides, DEFAULT_INTERVAL);
 
     setupFractions(slides, fractions, slideDelays);
 
-    const kv01_options = {
-      type: "fade",
-      rewind: true,
-      autoplay: true,
-      speed: 1000,
-      interval: slideDelays[0] || slideDisplayDuration,
-      arrows: false,
-      pagination: false,
-      pauseOnHover: false,
-      pauseOnFocus: false,
-    };
-    const kv01 = new Splide(kv01_selector, kv01_options);
-
-    kv01.on("move", (newIndex) => {
-      setSplideInterval(kv01, slideDelays[newIndex] || slideDisplayDuration);
-      updateProgress(newIndex);
+    const splide = new Splide(KV_SELECTOR, {
+      type: "fade", // フェード切り替え
+      rewind: true, // 最後まで行ったら最初に戻る
+      autoplay: true, // 自動再生ON
+      speed: 1000, // フェード切り替えの速度
+      interval: slideDelays[0], // 最初のスライドの表示時間
+      arrows: false, // 矢印ナビゲーションなし
+      pagination: false, // ページネーションなし
+      pauseOnHover: false, // ホバー時に一時停止しない
+      pauseOnFocus: false, // フォーカス時に一時停止しない
     });
 
-    kv01.on("autoplay:play", () => {
-      const index = kv01.index;
-      setSplideInterval(kv01, slideDelays[index] || slideDisplayDuration);
+    splide.on("move", (newIndex) => {
+      setSplideInterval(splide, slideDelays[newIndex]);
     });
 
-    kv01.mount();
+    splide.on("autoplay:play", () => {
+      setSplideInterval(splide, slideDelays[splide.index]);
+    });
 
-    updateProgress(0);
+    splide.mount();
   }
 
   initSplideKV();
