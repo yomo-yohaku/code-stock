@@ -14,6 +14,7 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as l}from"./inde
 `,n.jsx(e.hr,{}),`
 `,n.jsx(e.h3,{id:"-更新履歴",children:"📝 更新履歴"}),`
 `,n.jsxs(e.ul,{children:[`
+`,n.jsx(e.li,{children:"2025-09-09: 「LAYOUT ＞ Header ＞ Header01」を追加"}),`
 `,n.jsx(e.li,{children:"2025-09-05: 「PROJECT ＞ Kv ＞ Splide Kv」を追加"}),`
 `,n.jsx(e.li,{children:"2025-09-01: 「Code Stock」を公開"}),`
 `]}),`
