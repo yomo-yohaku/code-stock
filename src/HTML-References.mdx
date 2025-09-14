@@ -1,0 +1,1110 @@
+# HTML 要素リファレンス
+
+## &lt;main&gt;
+
+主要なコンテンツを表す
+
+- コンテンツ区分
+- 最も主要なコンテンツであることを表す
+- サイト全体で固有のコンテンツに対して使用する
+- 1ページで複数回使ってはいけない
+
+```html
+<body>
+  <header>
+    <p>サイトロゴ</p>
+    <nav>ナビゲーションリンク</nav>
+  </header>
+
+  <!-- 記事の内容をmainに -->
+  <main>
+    <article>
+      <h1>記事のタイトル</h1>
+      <p>記事の本文</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>コピーライト情報</p>
+  </footer>
+</body>
+```
+
+## &lt;header&gt;
+
+ヘッダー領域（サイトやセクションの冒頭）
+
+- コンテンツ区分
+- 複数回使用できる
+- 装飾を目的として使わない
+
+### ページのヘッダー
+
+```html
+<header class="header">
+  <div class="header__inner">
+    <a href="#" class="header__logo">
+      <img class="header__logo-img" src="assets/images/logo.svg" alt="サイトロゴ" />
+    </a>
+
+    <nav class="header__nav" aria-label="メインナビゲーション">
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="#" class="header__link">ホーム</a></li>
+        <li class="header__nav-item"><a href="#" class="header__link">記事一覧</a></li>
+        <li class="header__nav-item"><a href="#" class="header__link">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+```
+
+### 記事のヘッダー
+
+```html
+<article class="article">
+  <header class="article__header">
+    <h1 class="article__title">記事タイトル</h1>
+    <p class="article__meta"><time class="article__date" datetime="2025-09-10">2025/09/10</time></p>
+  </header>
+
+  <section class="article__section">
+    <h2 class="article__section-title">セクションタイトル</h2>
+    <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+  </section>
+</article>
+```
+
+## &lt;footer&gt;
+
+フッター領域（サイトやセクションの末尾）
+
+- コンテンツ区分
+- 複数回使用できる
+- 装飾を目的として使わない
+
+### ページのフッター
+
+```html
+<body>
+  ～ コンテンツ ～
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <nav class="footer__nav" aria-label="フッターナビゲーション">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item"><a href="#" class="footer__link">利用規約</a></li>
+          <li class="footer__nav-item"><a href="#" class="footer__link">プライバシーポリシー</a></li>
+          <li class="footer__nav-item"><a href="#" class="footer__link">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <address class="footer__address">
+        <span class="footer__address-item">
+          電話: <a href="tel:0312345678" class="footer__address-link">03-1234-5678</a>
+        </span>
+        <span class="footer__address-item">
+          Email: <a href="mailto:info@example.com" class="footer__address-link">info@example.com</a>
+        </span>
+        <span class="footer__address-item">
+          住所: <a href="https://maps.google.com/?q=東京都千代田区1-2-3" target="_blank" rel="noopener noreferrer" class="footer__address-link">東京都千代田区1-2-3</a>
+        </span>
+      </address>
+      <div class="footer__copy">&copy; 2025 MySite. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+```
+
+### 記事のフッター
+
+```html
+<article class="article">
+  <section class="article__section">
+    <h2 class="article__section-title">セクションタイトル</h2>
+    <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+  </section>
+
+  <footer class="article__footer">
+    <nav class="article__actions" aria-label="記事操作">
+      <button class="article__action article__action--bookmark" type="button">ブックマーク</button>
+      <button class="article__action article__action--share" type="button">共有</button>
+    </nav>
+  </footer>
+</article>
+```
+
+## &lt;article&gt;
+
+独立した記事やコンテンツ
+
+- コンテンツ区分
+- 見出し（&lt;h1&gt;〜&lt;h6&gt;要素）により内容を示す
+- 複数回使用できる
+- &lt;article&gt;要素の中でテーマが分かれる場合は&lt;section&gt;要素を使うと良い
+- &lt;article&gt;要素は入れ子にできる
+
+```html
+<article class="article">
+  <header class="article__header">
+    <h1 class="article__title">記事タイトル</h1>
+    <p class="article__meta"><time class="article__date" datetime="2025-09-10">2025/09/10</time></p>
+  </header>
+
+  <div class="article__content">
+    <section class="article__section">
+      <h2 class="article__section-title">セクションタイトル</h2>
+      <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+    </section>
+
+    <figure class="article__figure">
+      <img class="article__img" src="assets/images/" alt="画像の説明文" />
+      <figcaption class="article__figcaption">図1：画像のキャプション</figcaption>
+    </figure>
+
+    <section class="article__section">
+      <h3 class="article__section-subtitle">セクションサブタイトル</h3>
+      <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+    </section>
+
+    <section class="article__section">
+      <article class="article__nested">
+        <h4 class="article__nested-title">入れ子の記事のタイトル1</h4>
+        <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+      </article>
+
+      <article class="article__nested">
+        <h4 class="article__nested-title">入れ子の記事のタイトル2</h4>
+        <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+      </article>
+    </section>
+  </div>
+</article>
+```
+
+## &lt;section&gt;
+
+1つのセクション（区間）を表す
+
+- コンテンツ区分
+- まとまりを作る最も汎用的なタグ
+- 見出し（&lt;h1&gt;〜&lt;h6&gt;要素）により内容を示す
+- 複数回使用できる
+- 装飾を目的として使わない
+- &lt;article&gt;要素は独立したまとまりに対して、&lt;section&gt;要素は小さなテーマのまとまりに対して使うのが理想的
+
+```html
+<article class="article">
+  <h1 class="article__title">記事タイトル</h1>
+
+  <section class="article__section">
+    <h2 class="article__section-title">セクションタイトル</h2>
+    <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+  </section>
+
+  <section class="article__section">
+    <h3 class="article__section-subtitle">セクションサブタイトル</h3>
+    <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+  </section>
+</article>
+```
+
+## &lt;aside&gt;
+
+補足的な内容であることを表す
+
+- コンテンツ区分
+- 複数回使用できる
+
+```html
+<article class="article">
+  <header class="article__header">
+    <h1 class="article__title">記事タイトル</h1>
+  </header>
+
+  <div class="article__content">
+    <section class="article__section">
+      <h2 class="article__section-title">セクションタイトル</h2>
+      <p class="article__paragraph">これは本文の段落です。</p>
+    </section>
+
+    <aside class="article__aside">
+      <h3 class="article__aside-title">記事の補足情報</h3>
+      <p class="article__aside-text">これは補足情報のテキストです。これは補足情報のテキストです。これは補足情報のテキストです。これは補足情報のテキストです。</p>
+    </aside>
+
+    <section class="article__section">
+      <h2 class="article__section-title">セクションタイトル</h2>
+      <p class="article__paragraph">これは本文の段落です。</p>
+    </section>
+  </div>
+</article>
+```
+
+### 関連記事
+
+```html
+<article class="article">
+  <section class="article__section">
+    <h2 class="article__section-title">セクションタイトル</h2>
+    <p class="article__paragraph">これは本文の段落です。</p>
+  </section>
+
+  <aside class="article__aside">
+    <h2 class="article__aside-title">関連記事</h2>
+    <ul class="article__related">
+      <li class="article__related-item"><a href="#" class="article__related-link">関連記事リンク1</a></li>
+      <li class="article__related-item"><a href="#" class="article__related-link">関連記事リンク2</a></li>
+    </ul>
+  </aside>
+</article>
+```
+
+### サイドバー
+
+```html
+<main class="main">
+  <article class="article">
+    <h1 class="article__title">記事タイトル</h1>
+    <p class="article__paragraph">これは本文の段落です。</p>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar__content">サイドバー</div>
+  </aside>
+</main>
+```
+
+## &lt;nav&gt;
+
+ナビゲーションセクション要素
+
+- コンテンツ区分
+- 複数回使用できる
+- 複数のナビゲーション がある場合はそれぞれを区別できるように aria-label属性 を付ける
+
+### メニュー
+
+```html
+<nav class="menu" aria-label="グローバルメニュー">
+  <ul class="menu__list">
+    <li class="menu__item menu__item--active">
+      <a href="/" class="menu__link">ホーム</a>
+    </li>
+    <li class="menu__item">
+      <a href="/about" class="menu__link">私たちについて</a>
+    </li>
+    <li class="menu__item menu__item--has-children">
+      <a href="/services" class="menu__link">サービス</a>
+      <ul class="menu__sublist">
+        <li class="menu__subitem">
+          <a href="/services/web" class="menu__sublink">Web開発</a>
+        </li>
+        <li class="menu__subitem">
+          <a href="/services/design" class="menu__sublink">デザイン</a>
+        </li>
+      </ul>
+    </li>
+    <li class="menu__item">
+      <a href="/contact" class="menu__link">お問い合わせ</a>
+    </li>
+  </ul>
+</nav>
+```
+
+### 記事の目次
+
+```html
+<article class="article">
+  <header class="article__header">
+    <h1 class="article__title">記事のタイトル</h1>
+  </header>
+
+  <nav class="article__toc" aria-label="記事の目次">
+    <h2 class="article__toc-title">目次</h2>
+    <ol class="article__toc-list">
+      <li class="article__toc-item">
+        <a href="#section-1" class="article__toc-link">1. セクション</a>
+      </li>
+      <li class="article__toc-item">
+        <a href="#section-2" class="article__toc-link">2. セクション</a>
+        <ol class="article__toc-list article__toc-list--nested">
+          <li class="article__toc-item">
+            <a href="#section-2-1" class="article__toc-link">2.1 セクション</a>
+          </li>
+          <li class="article__toc-item">
+            <a href="#section-2-2" class="article__toc-link">2.2 セクション</a>
+          </li>
+        </ol>
+      </li>
+      <li class="article__toc-item">
+        <a href="#section-3" class="article__toc-link">3. セクション</a>
+      </li>
+    </ol>
+  </nav>
+
+  <p class="article__paragraph">本文</p>
+</article>
+```
+
+### パンくずリスト
+
+- 現在ページを示すにためにaria-current="page"を使う
+
+```html
+<nav class="breadcrumb" aria-label="パンくずリスト">
+  <ol class="breadcrumb__list">
+    <li class="breadcrumb__item">
+      <a href="/" class="breadcrumb__link">ホーム</a>
+    </li>
+    <li class="breadcrumb__item">
+      <a href="/category" class="breadcrumb__link">カテゴリー</a>
+    </li>
+    <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+      記事タイトル
+    </li>
+  </ol>
+</nav>
+```
+
+## &lt;address&gt;
+
+連絡先の情報を表す
+
+- コンテンツ区分
+
+```html
+<address class="contact-address">
+  株式会社HOGEへのお問い合わせ<br>
+  メール：<a href="mailto:hoge@hoge.com" class="contact-address__link">hoge@hoge.com</a><br>
+  電話：<a href="tel:012-345-6789" class="contact-address__link">012-345-6789</a>
+</address>
+```
+
+### たとえば以下のようなものを含める
+
+- メールアドレス
+- 電話番号
+- 住所
+- ウェブサイトのURL
+- ソーシャルメディアのアカウントへのURL
+
+## &lt;h1&gt;〜&lt;h6&gt;
+
+見出し要素
+
+- コンテンツ区分
+- 見出しタグには、まとまり（セクション）の内容を一言で表すようなテキストを入れる
+- h1は基本的には1回だけ使う
+- 見出しタグの中に画像を入れる場合はalt属性に内容を書く
+
+```html
+<article class="article">
+  <h1 class="article__title">記事タイトル</h1>
+
+  <section class="article__section">
+    <h2 class="article__section-title">大セクション1始まり</h2>
+
+    <h3 class="article__subsection-title">小セクション</h3>
+    <p class="article__paragraph">...</p>
+
+    <h3 class="article__subsection-title">小セクション</h3>
+    <p class="article__paragraph">...</p>
+
+    <h4 class="article__subsubsection-title">小小セクション</h4>
+    <p class="article__paragraph">...</p>
+  </section>
+
+  <section class="article__section">
+    <h2 class="article__section-title">大セクション2始まり</h2>
+        ...
+  </section>
+</article>
+```
+
+## &lt;ul&gt;、&lt;li&gt;
+
+順序なしリスト要素
+
+- テキストコンテンツ
+- 項目の並び順を入れ替えても、問題のないリストに使う
+- ulの直下にはliタグしか使えない
+- リストの中に、別のリストを入れることができる
+- 複数の項目のまとまりには積極的にリストを使う
+
+```html
+<ul class="my-list">
+  <li class="my-list-item">
+    第一の項目
+    <ul class="my-list my-list--nested">
+      <li class="my-list-item">第一の項目の子1</li>
+      <li class="my-list-item">第一の項目の子2</li>
+      <li class="my-list-item">
+        第一の項目の子3
+        <ul class="my-list my-list--nested">
+          <li class="my-list-item">さらに子1</li>
+          <li class="my-list-item">さらに子2</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="my-list-item">第二の項目</li>
+  <li class="my-list-item">第三の項目</li>
+</ul>
+```
+
+## &lt;ol&gt;、&lt;li&gt;
+
+順序付きリスト要素
+
+- テキストコンテンツ
+- 項目の順番が入れ替わると、意味が変わってしまうようなリストに使う
+- olの直下にはliタグしか使えない
+- リストの中に、別のリストを入れることができる
+- 複数の項目のまとまりには積極的にリストを使う
+
+```html
+<ol class="my-list">
+  <li class="my-list-item">
+    手順1: 環境を準備する
+    <ol class="my-list my-list--nested">
+      <li class="my-list-item">エディタをインストール</li>
+      <li class="my-list-item">ブラウザを最新化</li>
+    </ol>
+  </li>
+  <li class="my-list-item">手順2: プロジェクトを作成する</li>
+  <li class="my-list-item">手順3: コードを書き始める</li>
+</ol>
+```
+
+### 順序を逆にする
+
+```html
+<ol class="my-list" reversed>
+  <li class="my-list-item">第3位: りんご</li>
+  <li class="my-list-item">第2位: バナナ</li>
+  <li class="my-list-item">第1位: みかん</li>
+</ol>
+```
+
+### 開始番号を変える
+
+```html
+<ol class="my-list" start="4">
+  <li class="my-list-item">手順4: テスト環境を構築する</li>
+  <li class="my-list-item">手順5: 動作確認を行う</li>
+  <li class="my-list-item">手順6: 本番環境へデプロイする</li>
+</ol>
+```
+
+### 数字を途中で変更する
+
+```html
+<ol class="my-list">
+  <li class="my-list-item">手順1: 環境を準備する</li>
+  <li class="my-list-item">手順2: プロジェクトを作成する</li>
+  <li class="my-list-item" value="10">手順10: 特殊ケースの処理</li>
+  <li class="my-list-item">手順11: テストを実行する</li>
+  <li class="my-list-item" value="20">手順20: 本番デプロイ</li>
+</ol>
+```
+
+### type 属性
+
+- "A" → A, B, C…
+- "a" → a, b, c…
+- "I" → I, II, III…
+- "i" → i, ii, iii…
+
+```html
+<ol class="my-list" type="A">
+  <li class="my-list-item">項目A: 前提条件の確認</li>
+  <li class="my-list-item">項目B: 環境設定</li>
+  <li class="my-list-item">項目C: プロジェクト作成</li>
+</ol>
+```
+
+## &lt;dl&gt;、&lt;dt&gt;、&lt;dd&gt;
+
+説明リストを表す
+
+- テキストコンテンツ
+- 各項目に「名前」と「説明文」が必要なリストに使う
+- 複数の説明（dd）を並べてもOK
+- 複数の名前（dt）を並べてもOK
+- dlの中でdivタグを使ってもOK
+
+```html
+<dl>
+  <div>
+    <dt>HTML</dt>
+    <dd>Web ページの構造を記述するマークアップ言語。</dd>
+    <dd>HyperText Markup Language の略。</dd>
+  </div>
+
+  <div>
+    <dt>CSS</dt>
+    <dd>文書の見た目やレイアウトを指定するスタイルシート言語。</dd>
+  </div>
+
+  <div>
+    <dt>JavaScript</dt>
+    <dd>ブラウザ上で動作するスクリプト言語で、ページに動きをつけることができる。</dd>
+    <dd>サーバーサイド（Node.js）でも利用可能。</dd>
+  </div>
+</dl>
+```
+
+### dlに入れてはいけないもの
+
+- 段落タグ（&lt;p&gt;）
+- 見出しタグ（&lt;h1&gt;〜&lt;h6&gt;）
+- リストタグ（&lt;ul&gt;、&lt;ol&gt;）
+など
+
+### Q & Aで使うこともできる
+
+```html
+<dl>
+  <dt>Q. サービスは無料ですか？</dt>
+  <dd>A. 基本プランは無料で利用できます。有料プランもあります。</dd>
+</dl>
+```
+
+
+## &lt;p&gt;
+
+段落を表す
+
+- テキストコンテンツ
+- 文章のまとまりごとに使う（文章の途中で次の&lt;p&gt;に移ってはいけない）
+- 画像を「段落の一部」として扱いたいときは&lt;p&gt;の中に&lt;img&gt;を入れる
+
+```html
+<p>
+  これはテキストの最初の段落です。これはテキストの最初の段落です。これはテキストの最初の段落です。これはテキストの最初の段落です。
+</p>
+<p>
+  これはテキストの二番目の段落です。これはテキストの二番目の段落です。これはテキストの二番目の段落です。これはテキストの二番目の段落です。
+</p>
+<p>
+  画像はこちらです。
+</p>
+<p>
+  <img src="assets/images/image_example.jpg" alt="altテキスト" />
+</p>
+```
+
+### 画像の使い分け
+
+<table>
+  <thead>
+    <tr>
+      <th>タグ</th>
+      <th>用途</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>&lt;p&gt;</code></td>
+      <td>画像が記事を構成する一部の場合。文章の流れ的に画像がそこに無いといけない場合。</td>
+    </tr>
+    <tr>
+      <td><code>&lt;figure&gt;</code></td>
+      <td>画像を別の場所に移しても、本文の意味が成り立つ場合（キャプション付きの図表など）。</td>
+    </tr>
+    <tr>
+      <td><code>&lt;div&gt;</code></td>
+      <td>装飾のため、見栄えのために画像を使うとき。</td>
+    </tr>
+  </tbody>
+</table>
+
+### p以外を使う例
+
+<table>
+  <thead>
+    <tr>
+      <th>タグ</th>
+      <th>用途</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>&lt;h1&gt;〜&lt;h6&gt;</code></td>
+      <td>見出しを書くとき</td>
+    </tr>
+    <tr>
+      <td><code>&lt;pre&gt;</code>、<code>&lt;code&gt;</code></td>
+      <td>ソースコードを貼るとき</td>
+    </tr>
+    <tr>
+      <td><code>&lt;address&gt;</code></td>
+      <td>連絡先を書くとき</td>
+    </tr>
+    <tr>
+      <td><code>&lt;div&gt;</code></td>
+      <td>単純にブロックを作りたいとき</td>
+    </tr>
+  </tbody>
+</table>
+
+## &lt;figure&gt;、&lt;figcaption&gt;
+
+自己完結するコンテンツを表す
+
+- テキストコンテンツ
+- その部分だけを抜き出しても意味が成り立つ（図表やイラスト、写真など）
+- figcaptionと合わせて使われることが多い
+- 必要であれば、1つのfigureタグの中に複数の画像を入れることもできる
+- キャプションをコンテンツの前に配置してもOK
+
+```html
+<figure>
+  <img src="assets/images/image_example01.jpg" alt="サンプル画像" />
+  <img src="assets/images/image_example02.jpg" alt="サンプル画像" />
+  <figcaption>
+    図1: サンプル画像のキャプション
+  </figcaption>
+</figure>
+```
+
+### 注釈付きでコードを掲載する
+
+```html
+<figure>
+  <figcaption>JavaScriptで3秒後に処理を行う</figcaption>
+  <pre><code>
+    setTimeout(function(){
+      console.log("Hello");
+    }, 3000);
+  </code></pre>
+</figure>
+```
+
+### 引用文で使う
+
+```html
+<figure>
+  <blockquote>
+    <p>成功する人は「思い通りに行かない事が起きるのはあたりまえ」という前提で挑戦している。</p>
+  </blockquote>
+  <figcaption>
+    — トーマス・エジソン, <cite><a href="https://○○">成功哲学について</a></cite>
+  </figcaption>
+</figure>
+```
+
+## &lt;blockquote&gt;、&lt;cite&gt;、&lt;q&gt;
+
+引用文を表す
+
+- テキストコンテンツ（blockquote）、インラインテキスト（cite、q）
+- Webページの文章を引用するときには、そのページのURLをcite属性に載せる
+- citeタグで引用元の「名前」を示す
+  - 歌詞の引用であれば&lt;cite&gt;曲名&lt;/cite&gt;
+  - Webページであれば&lt;cite&gt;サイト名や記事タイトル&lt;/cite&gt;
+- citeタグは人の名前を含めない
+- 他のWebページから引用するのであれば、aタグをciteタグ内に含めると親切
+
+```html
+<figure>
+  <blockquote cite="引用元のURL">
+    <p>引用文</p>
+  </blockquote>
+  <figcaption>
+    出典：<cite><a href="https://○○" target="_blank" rel="noopener noreferrer">引用元の名前</a></cite>
+  </figcaption>
+</figure>
+```
+
+### &lt;cite&gt;タグは「作品名だけを紹介したい」場合に使うことができる
+
+```html
+<h2>好きな映画ベスト5</h2>
+<ol>
+  <li><cite>映画名</cite>（199X）</li>
+  ...
+</ol>
+```
+
+### 短い引用文には&lt;q&gt;タグを使う
+
+- 段落の中で部分的に引用が入るときにはblockquoteではなくqタグを使う
+- qタグにもcite属性を指定できる
+
+```html
+<p>エジソンは<q cite="https://○○">私は毎日、18時間働くことにしている</q>と言っていたそうです。</p>
+```
+
+## &lt;pre&gt;、&lt;code&gt;
+
+整形済みのテキストを表す
+
+- テキストコンテンツ（pre）、インラインテキスト（code）
+- preでは改行やスペースがそのまま表示される
+
+### 複数行のコードを載せるならpreとcodeを使う
+
+```html
+<pre>
+  <code>
+    ここにコードを書く
+  </code>
+</pre>
+```
+
+### codeタグを段落やリストなどの文中で使う
+
+```html
+<p>まずは<code>console.log('Hello, world!')</code>を実行してみましょう。</p>
+```
+
+## &lt;div&gt;
+
+意味的要素がない汎用コンテナー
+
+- テキストコンテンツ
+- 他に適切な意味的要素がない場合に限り使用
+- CSSで見た目を変えたいときに使う
+
+```html
+<div class="my-box">
+  <p class="my-box-text">
+    これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。
+  </p>
+</div>
+```
+
+### 意味を持つタグの例
+<table>
+  <thead>
+    <tr>
+      <th>タグ</th>
+      <th>用途</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>&lt;header&gt;</code></td>
+      <td>ヘッダー</td>
+    </tr>
+    <tr>
+      <td><code>&lt;footer&gt;</code></td>
+      <td>フッター</td>
+    </tr>
+    <tr>
+      <td><code>&lt;main&gt;</code></td>
+      <td>主要なコンテンツ</td>
+    </tr>
+    <tr>
+      <td><code>&lt;aside&gt;</code></td>
+      <td>補足的なコンテンツ</td>
+    </tr>
+    <tr>
+      <td><code>&lt;section&gt;</code></td>
+      <td>1つのセクション</td>
+    </tr>
+    <tr>
+      <td><code>&lt;article&gt;</code></td>
+      <td>1つの独立した記事</td>
+    </tr>
+    <tr>
+      <td><code>&lt;nav&gt;</code></td>
+      <td>メニューなどのナビゲーション</td>
+    </tr>
+    <tr>
+      <td><code>&lt;h1&gt;〜&lt;h6&gt;</code></td>
+      <td>見出し</td>
+    </tr>
+    <tr>
+      <td><code>&lt;p&gt;</code></td>
+      <td>段落</td>
+    </tr>
+  </tbody>
+</table>
+
+## &lt;a&gt;
+
+アンカー要素
+
+- インラインテキスト
+- hrefでURLを指定する
+- href="#飛ぶ先のid"を指定すると、ページ内リンクができる
+- target="_blank"で別タブで開く（セキュリティ対策のためrel="noopener"も合わせて指定する）
+
+```html
+<a href="リンク先のURL" target="_blank" rel="noopener noreferrer">表示テキストや画像</a>
+```
+
+### buttonタグとの使い分け
+
+- クリックで他のページへ飛ぶようにしたい：&lt;a&gt;
+- クリックでJavaScriptを動かしたい：&lt;button&gt;
+- フォームの送信・リセット：&lt;button&gt;
+
+### rel属性
+
+- nofollowの使いどころの例
+  - 広告のリンクを貼るとき
+  - ユーザーが文章を投稿できるWebサービスをつくるとき
+- noopenerの使いどころ
+  - 外部サイトへのリンクで別タブで開く設定（target="_blank"）にするとき
+- noreferrerの使いどころ
+    - 信頼できない外部サイトへのリンクを貼るとき
+
+### mailtoでメールリンクを作る
+
+```html
+<a href="mailto:hoge@hoge.com">hoge@hoge.com</a>
+```
+
+### telで電話番号リンクを作る
+
+- href内の電話番号は、ハイフンありでも無しでもどちらでも可
+
+```html
+<a href="tel:01203456789">0120-345-6789</a>
+```
+
+### download属性でダウンロードリンクを作る
+
+```html
+<a href="ファイルのURL" download="ダウンロード時のファイル名">ダウンロード</a>
+```
+
+## &lt;span&gt;
+
+意味的要素がない汎用的なインラインコンテナー
+
+- インラインテキスト
+- CSSで見た目を変えたいときに使う
+- &lt;span&gt;要素にwidth、height、margin、paddingを反映したいときは、display: inline-blockを合わせて指定する
+
+```html
+<p>このサイトの名前は<span>Code Stock</span>です。</p>
+```
+
+## &lt;img&gt;
+
+画像埋め込み要素
+
+- マルティメディアリソース
+
+- 装飾のための画像ならaltの中身は何も書かなくていい
+- 開いた瞬間に表示したい画像以外はloading="lazy"（遅延読み込み）を指定
+
+```html
+<img
+  class="example-img"
+  src="assets/images/image_example.jpg"
+  alt="altテキスト"
+  loading="lazy"
+  width="180"
+  height="94"
+/>
+```
+
+### 対応している画像形式
+
+<table>
+  <thead>
+    <tr>
+      <th>形式</th>
+      <th>特徴</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>JPEG</td>
+      <td>写真など、色数の多い画像向け</td>
+    </tr>
+    <tr>
+      <td>PNG</td>
+      <td>イラストや図表など、色数の少ない画像向け。背景を透過できる</td>
+    </tr>
+    <tr>
+      <td>GIF</td>
+      <td>おもにアニメーション画像で使う</td>
+    </tr>
+    <tr>
+      <td>SVG</td>
+      <td>ベクター画像形式。ロゴ画像やアイコンに最適</td>
+    </tr>
+    <tr>
+      <td>WebP</td>
+      <td>画像とアニメーションの両方に対応。軽量で広く使える実用画像形式。非対応ブラウザ用にpictureタグを合わせて使う</td>
+    </tr>
+    <tr>
+      <td>AVIF</td>
+      <td>画像とアニメーションの両方に対応。より高画質・高効率な次世代の画像形式。非対応ブラウザ用にpictureタグを合わせて使う</td>
+    </tr>
+    <tr>
+      <td>APNG</td>
+      <td>アニメーション対応PNG画像フォーマット。非対応ブラウザ用にpictureタグを合わせて使う</td>
+    </tr>
+  </tbody>
+</table>
+
+## &lt;audio&gt;
+
+音声データを埋め込む
+
+- マルティメディアリソース
+- src属性で音声データのURLを指定する
+
+```html
+<audio controls src="音声データのURL"></audio>
+```
+
+### 属性
+
+<table>
+  <thead>
+    <tr>
+      <th>属性</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>controls</code></td>
+      <td>ブラウザのオーディオプレイヤーが表示される</td>
+    </tr>
+    <tr>
+      <td><code>autoplay</code></td>
+      <td>音声を自動再生</td>
+    </tr>
+    <tr>
+      <td><code>loop</code></td>
+      <td>ループ再生</td>
+    </tr>
+    <tr>
+      <td><code>preload="metadata"</code></td>
+      <td>音声のメタデータ（長さなど）だけを事前に読み込むように</td>
+    </tr>
+    <tr>
+      <td><code>controlslist="nodownload"</code></td>
+      <td>ダウンロードを禁止にする（Chrome）</td>
+    </tr>
+  </tbody>
+</table>
+
+### sourceタグで音声データを複数指定する
+
+- 対応している音声ファイルの1つだけを再生
+
+```html
+<audio controls>
+  <source src="example.mp3" type="audio/mp3"/>
+  <source src="example.wav" type="audio/wav"/>
+  <source src="example.ogg" type="audio/ogg"/>
+</audio>
+```
+
+## &lt;video&gt;
+
+動画埋め込み要素
+
+- マルティメディアリソース
+- src属性に動画データのURLを指定する
+
+```html
+<video controls src="動画データのURL"></video>
+```
+
+### 属性
+
+<table>
+  <thead>
+    <tr>
+      <th>属性</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>controls</code></td>
+      <td>ブラウザの再生コントローラーが表示される</td>
+    </tr>
+    <tr>
+      <td><code>loop</code></td>
+      <td>動画をループ再生する</td>
+    </tr>
+    <tr>
+      <td><code>muted</code></td>
+      <td>音声を消音にする</td>
+    </tr>
+    <tr>
+      <td><code>autoplay</code></td>
+      <td>自動再生する（同時にmutedを指定しておく）</td>
+    </tr>
+    <tr>
+      <td><code>preload="metadata"</code></td>
+      <td>動画のメタデータ（長さなど）だけ事前に読み込むように</td>
+    </tr>
+    <tr>
+      <td><code>poster="画像のURL"</code></td>
+      <td>サムネイル画像を指定</td>
+    </tr>
+    <tr>
+      <td><code>playsinline</code></td>
+      <td>動画をインライン再生する（全画面表示せずに再生する）</td>
+    </tr>
+    <tr>
+      <td><code>width</code>・<code>height</code></td>
+      <td>高さ・幅を指定する</td>
+    </tr>
+  </tbody>
+</table>
+
+### sourceタグで動画データを複数指定する
+
+- 対応している動画ファイルの1つだけを再生
+
+```html
+<video controls>
+  <source src="movie.mp4" type="video/mp4"/>
+  <source src="movie.avi" type="video/avi"/>
+  <source src="movie.ogv" type="video/ogv"/>
+</video>
+```
+
+## &lt;details&gt;、&lt;summary&gt;
+
+折りたたみコンテンツ
+
+- インタラクティブ要素
+- 詳細には、複数の要素を配置できる
+
+```html
+<details class="accordion">
+  <summary class="accordion__summary">
+    アコーディオンのタイトル
+  </summary>
+  <div class="accordion__content">
+    <p class="accordion__paragraph">これはアコーディオンの詳細です。</p>
+    <ul class="accordion__list">
+      <li class="accordion__list-item">リスト1</li>
+      <li class="accordion__list-item">リスト2</li>
+    </ul>
+  </div>
+</details>
+```
+
+### はじめからアコーディオンを開いておく
+
+- &lt;details&gt;要素にopen属性を指定
+
+```html
+<details class="accordion" open>
+  <summary class="accordion__summary">
+    アコーディオンのタイトル
+  </summary>
+  <div class="accordion__content">アコーディオンの詳細</div>
+</details>
+```
+
+
+# 参考
+- <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
+- <a href="https://catnose.me/learning/html" target="_blank" rel="noopener noreferrer">初心者向けHTMLリファレンス</a>
