@@ -1,9 +1,9 @@
 import "destyle.css";
 import "@splidejs/splide/css/core";
 import Splide from "@splidejs/splide";
+import cssCardEvent from "../code/component/card/event/index.css?raw";
 
 import splideSlider from "../code/project/slider/splide-slider/index.html?raw";
-import cssCardEvent from "../code/component/card/event/index.css?raw";
 import cssSplideSlider from "../code/project/slider/splide-slider/index.css?raw";
 import jsSplideSlider from "../code/project/slider/splide-slider/index.js?raw";
 

@@ -1,0 +1,33 @@
+.p-section-right-over {
+  overflow: hidden;
+}
+
+.p-section-right-over__container {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  padding: 24px;
+  margin-inline: auto;
+}
+@media screen and (min-width: 768px) {
+  .p-section-right-over__container {
+    width: 1000px;
+    padding: 40px;
+  }
+}
+
+.p-section-right-over__container::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+  content: "";
+  background-color: #f8fafc;
+  border-radius: 16px 0 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .p-section-right-over__container::before {
+    border-radius: 32px 0 0 32px;
+  }
+}
