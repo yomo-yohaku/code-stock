@@ -181,7 +181,7 @@
 
 @media (any-hover: hover) {
   .c-button-gradation {
-    transition: background 0.3s;
+    transition: background-position 0.3s;
   }
 
   .c-button-gradation:hover {

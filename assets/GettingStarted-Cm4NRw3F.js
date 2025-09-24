@@ -8,12 +8,17 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as i}from"./inde
 `,n.jsx(e.li,{children:"コピペの際はtailwindcssのクラス（tw:）を外して、別途CSSで調整してください。"}),`
 `]}),`
 `]}),`
-`,n.jsxs(e.li,{children:["スライダーは ",n.jsx("a",{href:"https://ja.splidejs.com/",target:"_blank",rel:"noopener noreferrer",children:"splide"})," を使用しています。"]}),`
+`,n.jsxs(e.li,{children:["スライダーは ",n.jsx("a",{href:"https://ja.splidejs.com/",target:"_blank",rel:"noopener noreferrer",children:"splide"})," を使用しています。",`
+`,n.jsxs(e.ul,{children:[`
+`,n.jsx(e.li,{children:"カスタマイズ用のsplide-core.min.cssを使用"}),`
+`]}),`
+`]}),`
 `]}),`
 `,n.jsx(e.p,{children:"今後も追加・更新していく予定です。"}),`
 `,n.jsx(e.hr,{}),`
 `,n.jsx(e.h3,{id:"-更新履歴",children:"📝 更新履歴"}),`
 `,n.jsxs(e.ul,{children:[`
+`,n.jsx(e.li,{children:"2025-09-24: 「COMPONENT ＞ Text ＞ Link」を追加"}),`
 `,n.jsx(e.li,{children:"2025-09-23: 「COMPONENT ＞ Text ＞ Flowing」を追加"}),`
 `,n.jsx(e.li,{children:"2025-09-18: 「PROJECT ＞ Section ＞ RightOver」を追加"}),`
 `,n.jsx(e.li,{children:"2025-09-14: 「HTML 要素リファレンス」を追加"}),`
@@ -21,4 +26,4 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as i}from"./inde
 `,n.jsx(e.li,{children:"2025-09-05: 「PROJECT ＞ Kv ＞ Splide Kv」を追加"}),`
 `,n.jsx(e.li,{children:"2025-09-01: 「Code Stock」を公開"}),`
 `]}),`
-`,n.jsx(e.hr,{})]})}function c(r={}){const{wrapper:e}={...i(),...r.components};return e?n.jsx(e,{...r,children:n.jsx(s,{...r})}):s(r)}export{c as default};
+`,n.jsx(e.hr,{})]})}function t(r={}){const{wrapper:e}={...i(),...r.components};return e?n.jsx(e,{...r,children:n.jsx(s,{...r})}):s(r)}export{t as default};
