@@ -1,0 +1,67 @@
+.c-text-link-line01 {
+  position: relative;
+  display: inline-block;
+  color: #0c0a09;
+}
+
+.c-text-link-line01::before {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  content: "";
+  background: #0c0a09;
+}
+
+@media (any-hover: hover) {
+  .c-text-link-line01::before {
+    transition: width 0.3s ease;
+  }
+
+  .c-text-link-line01:hover::before {
+    width: 100%;
+  }
+}
+
+.c-text-link-line02 {
+  position: relative;
+  display: inline-block;
+  color: #0c0a09;
+}
+
+.c-text-link-line02::before {
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  content: "";
+  background: #0c0a09;
+}
+
+@media (any-hover: hover) {
+  .c-text-link-line02::before {
+    transition: width 0.3s ease;
+  }
+
+  .c-text-link-line02:hover::before {
+    left: 0;
+    inline-size: 100%;
+  }
+}
+
+.c-text-link-opacity {
+  display: inline-block;
+  color: #0c0a09;
+}
+
+@media (any-hover: hover) {
+  .c-text-link-opacity {
+    transition: opacity 0.3s ease;
+  }
+
+  .c-text-link-opacity:hover {
+    opacity: 0.7;
+  }
+}
