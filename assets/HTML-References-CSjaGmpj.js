@@ -59,7 +59,7 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as i}from"./inde
 
   <section class="article__section">
     <h2 class="article__section-title">セクションタイトル</h2>
-    <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+    <p class="article__paragraph">これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。</p>
   </section>
 </article>
 `})}),`
@@ -104,7 +104,7 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as i}from"./inde
 `,n.jsx(l.pre,{children:n.jsx(l.code,{className:"language-html",children:`<article class="article">
   <section class="article__section">
     <h2 class="article__section-title">セクションタイトル</h2>
-    <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+    <p class="article__paragraph">これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。</p>
   </section>
 
   <footer class="article__footer">
@@ -133,7 +133,7 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as i}from"./inde
   <div class="article__content">
     <section class="article__section">
       <h2 class="article__section-title">セクションタイトル</h2>
-      <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+      <p class="article__paragraph">これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。</p>
     </section>
 
     <figure class="article__figure">
@@ -143,18 +143,18 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as i}from"./inde
 
     <section class="article__section">
       <h3 class="article__section-subtitle">セクションサブタイトル</h3>
-      <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+      <p class="article__paragraph">これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。</p>
     </section>
 
     <section class="article__section">
       <article class="article__nested">
         <h4 class="article__nested-title">入れ子の記事のタイトル1</h4>
-        <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+        <p class="article__paragraph">これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。</p>
       </article>
 
       <article class="article__nested">
         <h4 class="article__nested-title">入れ子の記事のタイトル2</h4>
-        <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+        <p class="article__paragraph">これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。</p>
       </article>
     </section>
   </div>
@@ -175,12 +175,12 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as i}from"./inde
 
   <section class="article__section">
     <h2 class="article__section-title">セクションタイトル</h2>
-    <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+    <p class="article__paragraph">これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。</p>
   </section>
 
   <section class="article__section">
     <h3 class="article__section-subtitle">セクションサブタイトル</h3>
-    <p class="article__paragraph">これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。</p>
+    <p class="article__paragraph">これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。</p>
   </section>
 </article>
 `})}),`
@@ -622,7 +622,7 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as i}from"./inde
 `]}),`
 `,n.jsx(l.pre,{children:n.jsx(l.code,{className:"language-html",children:`<div class="my-box">
   <p class="my-box-text">
-    これはテキストの段落です。これはテキストの最初の段落です。これはテキストの段落です。これはテキストの段落です。
+    これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。これはテキストの段落です。
   </p>
 </div>
 `})}),`
