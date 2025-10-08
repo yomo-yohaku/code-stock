@@ -1,7 +1,11 @@
 import "destyle.css";
+import "@splidejs/splide/css/core";
+import Splide from "@splidejs/splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 import flowing from "../code/component/text/flowing/index.html?raw";
 import cssFlowing from "../code/component/text/flowing/index.css?raw";
+import jsFlowing from "../code/component/text/flowing/index.js?raw";
 
 import link from "../code/component/text/link/index.html?raw";
 import cssLink from "../code/component/text/link/index.css?raw";
@@ -11,14 +15,31 @@ export default {
 };
 
 export const Flowing = {
-  render: () => `
-    <style>${cssFlowing}</style>
-    ${flowing}
-  `,
+  render: () => {
+    const container = document.createElement("div");
+    container.innerHTML = `
+      <style>${cssFlowing}</style>
+      ${flowing}
+    `;
+
+    requestAnimationFrame(() => {
+      window.Splide = Splide;
+      window.splide = {
+        Extensions: {
+          AutoScroll: AutoScroll,
+        },
+      };
+
+      new Function(jsFlowing)();
+    });
+
+    return container;
+  },
   parameters: {
     sourceCode: [
       { name: "HTML", code: flowing },
       { name: "CSS", code: cssFlowing },
+      { name: "JavaScript", code: jsFlowing },
     ],
   },
 };

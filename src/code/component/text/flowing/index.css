@@ -1,46 +1,50 @@
-.c-text-flowing {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-
-.c-text-flowing::after,
-.c-text-flowing::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
+.c-text-flowing__slide {
   font-size: 80px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
-  color: transparent;
+  color: #f5f5f5;
   white-space: nowrap;
-  content: "CODE STOCK CODE STOCK CODE STOCK CODE STOCK CODE STOCK";
-  opacity: 0.1;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: #555;
+  user-select: none;
 }
 @media screen and (min-width: 768px) {
-  .c-text-flowing::after,
-  .c-text-flowing::before {
-    font-size: 128px;
+  .c-text-flowing__slide {
+    font-size: 120px;
   }
 }
 
-.c-text-flowing::before {
-  animation: loop 100s linear -50s infinite;
+.p-text-flowing {
+  --text-flowing-size: 120px;
+
+  position: relative;
+  z-index: 1;
+  min-height: var(--text-flowing-size);
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .p-text-flowing {
+    --text-flowing-size: 148px;
+  }
 }
 
-.c-text-flowing::after {
-  animation: loop 100s linear infinite;
+.p-text-flowing .c-text-flowing__slide {
+  font-size: var(--text-flowing-size);
 }
 
-@keyframes loop {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.p-text-flowing__bg {
+  position: absolute;
+  top: -8px;
+  z-index: -1;
+}
+
+.p-text-flowing__heading {
+  padding-inline: 24px;
+}
+
+.p-text-flowing__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.p-text-flowing__lead {
+  margin-top: 16px;
 }
