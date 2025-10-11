@@ -1,8 +1,13 @@
-/* empty css                */import{c}from"./index-DPIsAUKd.js";const e=`<div class="tw:bg-slate-200 tw:py-[40px]">
+/* empty css                */import{c as t}from"./index-DPIsAUKd.js";const e=`<div class="tw:bg-slate-200 tw:py-[40px]">
   <p
     class="tw:font-bold tw:text-[16px] tw:md:text-[24px] tw:mb-[16px] tw:md:mb-[24px] tw:text-center"
   >
     右寄せセクション
+  </p>
+  <p
+    class="tw:font-bold tw:text-[14px] tw:md:text-[16px] tw:mb-[24px] tw:md:mb-[32px] tw:text-center tw:text-orange-500"
+  >
+    ※ カード（.c-card-event01）を使用
   </p>
 
   <div class="p-section-right-over">
@@ -165,6 +170,11 @@
       class="tw:font-bold tw:text-[16px] tw:md:text-[24px] tw:mb-[16px] tw:md:mb-[24px] tw:text-center"
     >
       通常セクション
+    </p>
+    <p
+      class="tw:font-bold tw:text-[14px] tw:md:text-[16px] tw:mb-[24px] tw:md:mb-[32px] tw:text-center tw:text-orange-500"
+    >
+      ※ カード（.c-card-event01）を使用
     </p>
 
     <div class="tw:w-[90%] tw:md:w-[1000px] tw:mx-auto">
@@ -356,7 +366,7 @@
 }
 `,d={title:"Project/Section"},n={render:()=>`
     <style>
-        ${c}
+        ${t}
         ${a}
       </style>
     ${e}

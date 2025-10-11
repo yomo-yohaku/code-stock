@@ -1,15 +1,26 @@
-/* empty css                */import{S as i}from"./splide.esm-nHf3Xtr5.js";import{c}from"./index-DPIsAUKd.js";const a=`<div class="tw:bg-slate-200 tw:p-[16px] tw:md:p-[40px]">
+/* empty css                */import{S as i}from"./splide.esm-nHf3Xtr5.js";import{c as t}from"./index-DPIsAUKd.js";const a=`<div class="tw:bg-slate-200 tw:p-[16px] tw:md:p-[40px]">
   <p
     class="tw:font-bold tw:text-[16px] tw:md:text-[24px] tw:mb-[16px] tw:md:mb-[24px] tw:text-center"
   >
     基本のスライダー（.p-slider-splide01）
   </p>
+  <p
+    class="tw:font-bold tw:text-[14px] tw:md:text-[16px] tw:mb-[24px] tw:md:mb-[32px] tw:text-center tw:text-orange-500"
+  >
+    ※ カード（.c-card-event01）、splide.min.js / splide-core.min.cssを使用
+  </p>
 
   <div class="p-slider-splide01 js-slider-splide01">
     <div class="splide">
       <div class="splide__arrows">
-        <button class="splide__arrow splide__arrow--prev"></button>
-        <button class="splide__arrow splide__arrow--next"></button>
+        <button
+          class="splide__arrow splide__arrow--prev"
+          aria-label="前のスライド"
+        ></button>
+        <button
+          class="splide__arrow splide__arrow--next"
+          aria-label="次のスライド"
+        ></button>
       </div>
       <div class="splide__track">
         <div class="splide__list">
@@ -328,6 +339,11 @@
   >
     右側をはみ出すスライダー（.p-slider-splide02）
   </p>
+  <p
+    class="tw:font-bold tw:text-[14px] tw:md:text-[16px] tw:mb-[24px] tw:md:mb-[32px] tw:text-center tw:text-orange-500"
+  >
+    ※ カード（.c-card-event01）、splide.min.js / splide-core.min.cssを使用
+  </p>
 
   <div class="p-slider-splide02 js-slider-splide02">
     <div class="splide">
@@ -643,8 +659,14 @@
         <ul class="splide__pagination"></ul>
 
         <div class="splide__arrows">
-          <button class="splide__arrow splide__arrow--prev"></button>
-          <button class="splide__arrow splide__arrow--next"></button>
+          <button
+            class="splide__arrow splide__arrow--prev"
+            aria-label="前のスライド"
+          ></button>
+          <button
+            class="splide__arrow splide__arrow--next"
+            aria-label="次のスライド"
+          ></button>
         </div>
       </div>
     </div>
@@ -904,7 +926,7 @@ const slider02 = new Splide(slider02_selector, slider02_options);
 slider02.mount();
 `,_={title:"Project/Slider"},n={render:()=>{const e=document.createElement("div");return e.innerHTML=`
       <style>
-        ${c}
+        ${t}
         ${s}
       </style>
       ${a}
@@ -936,4 +958,4 @@ slider02.mount();
       code: jsSplideSlider
     }]
   }
-}`,...n.parameters?.docs?.source}}};const v=["SplideSlider"];export{n as SplideSlider,v as __namedExportsOrder,_ as default};
+}`,...n.parameters?.docs?.source}}};const p=["SplideSlider"];export{n as SplideSlider,p as __namedExportsOrder,_ as default};

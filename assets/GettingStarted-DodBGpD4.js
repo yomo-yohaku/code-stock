@@ -1,4 +1,4 @@
-import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as l}from"./index-BwRnHMUQ.js";function r(i){const e={h3:"h3",hr:"hr",li:"li",p:"p",ul:"ul",...l(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(e.h3,{id:"-はじめに",children:"📖 はじめに"}),`
+import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as r}from"./index-BwRnHMUQ.js";function l(i){const e={h3:"h3",hr:"hr",li:"li",p:"p",ul:"ul",...r(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(e.h3,{id:"-はじめに",children:"📖 はじめに"}),`
 `,n.jsx(e.p,{children:"Web制作を効率化するために、HTML・CSS・JavaScriptでよく使うパーツやデザインをまとめています。"}),`
 `,n.jsxs(e.ul,{children:[`
 `,n.jsx(e.li,{children:"スマホの時は左下のメニューボタンからパーツを選択し、コードの表示は右下のボタンから表示ができます。"}),`
@@ -18,6 +18,8 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as l}from"./inde
 `,n.jsx(e.hr,{}),`
 `,n.jsx(e.h3,{id:"-更新履歴",children:"📝 更新履歴"}),`
 `,n.jsxs(e.ul,{children:[`
+`,n.jsx(e.li,{children:"✨ 2025-10-10: 「PROJECT ＞ Table ＞ Profile」を追加"}),`
+`,n.jsx(e.li,{children:"✨ 2025-10-10: 「COMPONENT ＞ Button ＞ Ripples」を追加"}),`
 `,n.jsx(e.li,{children:"⚡️ 2025-10-08: 「COMPONENT ＞ Text ＞ Flowing」をSplideに変更"}),`
 `,n.jsx(e.li,{children:"✨ 2025-09-24: 「COMPONENT ＞ Text ＞ Link」を追加"}),`
 `,n.jsx(e.li,{children:"✨ 2025-09-22: 「COMPONENT ＞ Text ＞ Flowing」を追加"}),`
@@ -27,4 +29,4 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as l}from"./inde
 `,n.jsx(e.li,{children:"✨ 2025-09-05: 「PROJECT ＞ Kv ＞ Splide Kv」を追加"}),`
 `,n.jsx(e.li,{children:"🚀 2025-09-01: 「Code Stock」を公開"}),`
 `]}),`
-`,n.jsx(e.hr,{})]})}function t(i={}){const{wrapper:e}={...l(),...i.components};return e?n.jsx(e,{...i,children:n.jsx(r,{...i})}):r(i)}export{t as default};
+`,n.jsx(e.hr,{})]})}function t(i={}){const{wrapper:e}={...r(),...i.components};return e?n.jsx(e,{...i,children:n.jsx(l,{...i})}):l(i)}export{t as default};

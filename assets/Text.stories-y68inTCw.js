@@ -134,7 +134,7 @@ document.querySelectorAll(".js-text-flowing").forEach((el) => {
   }
   new Splide(el, flowingTextOptions).mount(window.splide.Extensions);
 });
-`,on=`<div class="tw:grid tw:gap-[16px] tw:m-[16px]">
+`,on=`<div class="tw:flex tw:flex-col tw:gap-[16px] tw:m-[16px]">
   <p><a href="#" class="c-text-link-line01">テキストリンク（下線）</a></p>
 
   <p><a href="#" class="c-text-link-line02">テキストリンク（下線2）</a></p>
