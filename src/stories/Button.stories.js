@@ -9,6 +9,9 @@ import cssInversion from "../code/component/button/inversion/index.css?raw";
 import gradation from "../code/component/button/gradation/index.html?raw";
 import cssGradation from "../code/component/button/gradation/index.css?raw";
 
+import ripples from "../code/component/button/ripples/index.html?raw";
+import cssRipples from "../code/component/button/ripples/index.css?raw";
+
 export default {
   title: "Component/Button",
 };
@@ -48,6 +51,19 @@ export const Gradation = {
     sourceCode: [
       { name: "HTML", code: gradation },
       { name: "CSS", code: cssGradation },
+    ],
+  },
+};
+
+export const Ripples = {
+  render: () => `
+    <style>${cssRipples}</style>
+    ${ripples}
+  `,
+  parameters: {
+    sourceCode: [
+      { name: "HTML", code: ripples },
+      { name: "CSS", code: cssRipples },
     ],
   },
 };
