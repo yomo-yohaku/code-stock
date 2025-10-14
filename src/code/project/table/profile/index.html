@@ -5,7 +5,7 @@
     tableタグ（.p-table-profile）
   </p>
 
-  <table class="p-table-profile">
+  <table class="p-table-profile" aria-label="プロフィール情報">
     <tr class="p-table-profile__row">
       <th class="p-table-profile__th">項目</th>
       <td class="p-table-profile__td">
