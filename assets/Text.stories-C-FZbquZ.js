@@ -75,7 +75,6 @@
   --text-flowing-size: 120px;
 
   position: relative;
-  z-index: 1;
   min-height: var(--text-flowing-size);
   overflow: hidden;
 }

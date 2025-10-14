@@ -337,7 +337,7 @@
 
 .p-section-right-over__container {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   width: 90%;
   padding: 24px;
   margin-inline: auto;

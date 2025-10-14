@@ -217,7 +217,6 @@
   --button-ripples-pulse: calc(var(--button-ripples-w) + 24px);
 
   position: relative;
-  z-index: 1;
   display: grid;
   justify-content: center;
   width: var(--button-ripples-w);
@@ -230,7 +229,7 @@
   border-radius: 9999px;
 }
 
-.c-button-ripples:before {
+.c-button-ripples::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -245,7 +244,7 @@
 }
 
 @media (any-hover: hover) {
-  .c-button-ripples:hover:before {
+  .c-button-ripples:hover::before {
     width: calc(var(--button-ripples-w) + 40px);
     aspect-ratio: 1;
     opacity: 0.4;
@@ -256,7 +255,7 @@
     transition: all 0.5s ease-out;
   }
 
-  .c-button-ripples:hover:after {
+  .c-button-ripples:hover::after {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -290,7 +289,7 @@
   --button-ripples-circle-pulse: calc(var(--button-ripples-circle-w) + 24px);
 
   position: relative;
-  display: inline-block;
+  display: inline-flex;
 }
 
 .c-button-ripples-circle::before {
@@ -298,7 +297,7 @@
   top: 50%;
   left: 50%;
   display: inline-block;
-  width: calc(var(--button-ripples-circle-w) + 24px);
+  width: var(--button-ripples-circle-pulse);
   aspect-ratio: 1;
   content: "";
   border: 2px solid #fff;
@@ -308,7 +307,6 @@
 
 .c-button-ripples-circle__link {
   position: relative;
-  z-index: 1;
   display: inline-block;
   width: var(--button-ripples-circle-w);
   aspect-ratio: 1;
@@ -392,7 +390,7 @@
     opacity: 0;
   }
 }
-`,b={title:"Component/Button"},n={render:()=>`
+`,f={title:"Component/Button"},n={render:()=>`
     <style>${s}</style>
     ${o}
   `,parameters:{sourceCode:[{name:"HTML",code:o},{name:"CSS",code:s}]}},e={render:()=>`
@@ -460,4 +458,4 @@
       code: cssRipples
     }]
   }
-}`,...r.parameters?.docs?.source}}};const f=["Brightness","Inversion","Gradation","Ripples"];export{n as Brightness,t as Gradation,e as Inversion,r as Ripples,f as __namedExportsOrder,b as default};
+}`,...r.parameters?.docs?.source}}};const b=["Brightness","Inversion","Gradation","Ripples"];export{n as Brightness,t as Gradation,e as Inversion,r as Ripples,b as __namedExportsOrder,f as default};
