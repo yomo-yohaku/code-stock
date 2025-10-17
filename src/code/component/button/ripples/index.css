@@ -3,6 +3,7 @@
   --button-ripples-pulse: calc(var(--button-ripples-w) + 24px);
 
   position: relative;
+  z-index: 1;
   display: grid;
   justify-content: center;
   width: var(--button-ripples-w);
