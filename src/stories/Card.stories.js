@@ -1,5 +1,3 @@
-import "destyle.css";
-
 import event from "../code/component/card/event/index.html?raw";
 import cssEvent from "../code/component/card/event/index.css?raw";
 

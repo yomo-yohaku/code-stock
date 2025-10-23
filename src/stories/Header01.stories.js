@@ -1,5 +1,3 @@
-import "destyle.css";
-
 import header01 from "../code/layout/header/header01/index.html?raw";
 import cssHeader01 from "../code/layout/header/header01/index.css?raw";
 import jsHeader01 from "../code/layout/header/header01/index.js?raw";

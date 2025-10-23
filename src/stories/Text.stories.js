@@ -1,4 +1,3 @@
-import "destyle.css";
 import "@splidejs/splide/css/core";
 import Splide from "@splidejs/splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
@@ -9,6 +8,9 @@ import jsFlowing from "../code/component/text/flowing/index.js?raw";
 
 import link from "../code/component/text/link/index.html?raw";
 import cssLink from "../code/component/text/link/index.css?raw";
+
+import deco from "../code/component/text/deco/index.html?raw";
+import cssDeco from "../code/component/text/deco/index.css?raw";
 
 export default {
   title: "Component/Text",
@@ -53,6 +55,19 @@ export const Link = {
     sourceCode: [
       { name: "HTML", code: link },
       { name: "CSS", code: cssLink },
+    ],
+  },
+};
+
+export const Deco = {
+  render: () => `
+    <style>${cssDeco}</style>
+    ${deco}
+  `,
+  parameters: {
+    sourceCode: [
+      { name: "HTML", code: deco },
+      { name: "CSS", code: cssDeco },
     ],
   },
 };

@@ -1,5 +1,3 @@
-import "destyle.css";
-
 import title from "../code/component/heading/title/index.html?raw";
 import cssTitle from "../code/component/heading/title/index.css?raw";
 

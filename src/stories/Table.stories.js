@@ -1,5 +1,3 @@
-import "destyle.css";
-
 import profile from "../code/project/table/profile/index.html?raw";
 import cssProfile from "../code/project/table/profile/index.css?raw";
 

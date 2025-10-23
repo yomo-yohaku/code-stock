@@ -1,0 +1,55 @@
+.c-text-deco-marker {
+  background-color: #fff085;
+}
+
+.c-text-deco-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 0.5em;
+  text-decoration-color: #fff085;
+  text-decoration-skip-ink: none;
+  text-underline-offset: -0.2em;
+}
+
+.c-text-deco-gradation {
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(90deg, #f3966a 0%, #df6da1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.c-text-deco-outline {
+  font-size: 40px;
+  font-weight: 900;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #ff6900;
+  text-fill-color: transparent;
+  text-stroke: 1px #ff6900;
+}
+
+.c-text-deco-bubble {
+  display: inline-flex;
+  gap: 4px;
+  align-items: end;
+}
+
+.c-text-deco-bubble::before,
+.c-text-deco-bubble::after {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 30px;
+  height: 2px;
+  content: "";
+  background-color: #ff6900;
+  border-radius: 100vmax;
+  translate: 0 -10px;
+}
+
+.c-text-deco-bubble::before {
+  rotate: 60deg;
+}
+
+.c-text-deco-bubble::after {
+  rotate: -60deg;
+}

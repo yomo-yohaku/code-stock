@@ -1,4 +1,3 @@
-import "destyle.css";
 import "@splidejs/splide/css/core";
 import Splide from "@splidejs/splide";
 

@@ -1,4 +1,3 @@
-import "destyle.css";
 import cssCardEvent from "../code/component/card/event/index.css?raw";
 
 import rightOver from "../code/project/section/right-over/index.html?raw";

@@ -1,5 +1,3 @@
-import "destyle.css";
-
 import brightness from "../code/component/button/brightness/index.html?raw";
 import cssBrightness from "../code/component/button/brightness/index.css?raw";
 
