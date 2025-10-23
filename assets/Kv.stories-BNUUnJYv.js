@@ -1,4 +1,4 @@
-/* empty css                */import{S as o}from"./splide.esm-nHf3Xtr5.js";const s=`<div class="tw:py-[16px] tw:md:py-[40px]">
+import{S as o}from"./splide.esm-nHf3Xtr5.js";const s=`<div class="tw:py-[16px] tw:md:py-[40px]">
   <p
     class="tw:font-bold tw:text-[16px] tw:md:text-[24px] tw:mb-[16px] tw:md:mb-[24px] tw:text-center"
   >
@@ -125,7 +125,7 @@
     </div>
   </div>
 </div>
-`,r=`.p-kv-splide .p-kv-splide__slide-amount {
+`,a=`.p-kv-splide .p-kv-splide__slide-amount {
   width: 100%;
   max-height: 800px;
   aspect-ratio: 1552 / 872;
@@ -217,7 +217,7 @@
     font-size: 32px;
   }
 }
-`,a=`(function () {
+`,r=`(function () {
   const DEFAULT_INTERVAL = 7000; // スライドのデフォルト表示時間（ミリ秒）
   const KV_SELECTOR = ".js-kv-splide .splide";
 
@@ -303,15 +303,15 @@
 
   initSplideKV();
 })();
-`,v={title:"Project/Kv"},e={render:()=>{const n=document.createElement("div");return n.innerHTML=`
+`,p={title:"Project/Kv"},e={render:()=>{const n=document.createElement("div");return n.innerHTML=`
       <style>${t}</style>
       ${s}
     `,requestAnimationFrame(()=>{new Function(d)()}),n},parameters:{sourceCode:[{name:"HTML",code:s},{name:"CSS",code:t},{name:"JavaScript",code:d}]}},i={render:()=>{const n=document.createElement("div");return n.innerHTML=`
       <style>
-        ${r}
+        ${a}
       </style>
       ${l}
-    `,requestAnimationFrame(()=>{window.Splide=o,new Function(a)()}),n},parameters:{sourceCode:[{name:"HTML",code:l},{name:"CSS",code:r},{name:"JavaScript",code:a}]}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+    `,requestAnimationFrame(()=>{window.Splide=o,new Function(r)()}),n},parameters:{sourceCode:[{name:"HTML",code:l},{name:"CSS",code:a},{name:"JavaScript",code:r}]}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
   render: () => {
     const container = document.createElement("div");
     container.innerHTML = \`
@@ -362,4 +362,4 @@
       code: jsSplidKv
     }]
   }
-}`,...i.parameters?.docs?.source}}};const m=["Video","SplideKv"];export{i as SplideKv,e as Video,m as __namedExportsOrder,v as default};
+}`,...i.parameters?.docs?.source}}};const v=["Video","SplideKv"];export{i as SplideKv,e as Video,v as __namedExportsOrder,p as default};

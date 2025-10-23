@@ -1,4 +1,4 @@
-/* empty css                */import{c as t}from"./index-DPIsAUKd.js";const e=`<div class="tw:bg-slate-200 tw:py-[40px]">
+import{c as t}from"./index-DPIsAUKd.js";const e=`<div class="tw:bg-slate-200 tw:py-[40px]">
   <p
     class="tw:font-bold tw:text-[16px] tw:md:text-[24px] tw:mb-[16px] tw:md:mb-[24px] tw:text-center"
   >
@@ -364,7 +364,7 @@
     border-radius: 32px 0 0 32px;
   }
 }
-`,d={title:"Project/Section"},n={render:()=>`
+`,s={title:"Project/Section"},n={render:()=>`
     <style>
         ${t}
         ${a}
@@ -387,4 +387,4 @@
       code: cssRightOver
     }]
   }
-}`,...n.parameters?.docs?.source}}};const i=["RightOver"];export{n as RightOver,i as __namedExportsOrder,d as default};
+}`,...n.parameters?.docs?.source}}};const d=["RightOver"];export{n as RightOver,d as __namedExportsOrder,s as default};

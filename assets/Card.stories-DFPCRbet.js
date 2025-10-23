@@ -1,4 +1,4 @@
-/* empty css                */import{c as a}from"./index-DPIsAUKd.js";const e=`<div class="tw:bg-slate-200 tw:p-[40px]">
+import{c as a}from"./index-DPIsAUKd.js";const e=`<div class="tw:bg-slate-200 tw:p-[40px]">
   <p
     class="tw:font-bold tw:text-[16px] tw:md:text-[24px] tw:mb-[16px] tw:md:mb-[24px] tw:text-center"
   >
@@ -456,7 +456,7 @@
     </div>
   </div>
 </div>
-`,s={title:"Component/Card"},n={render:()=>`
+`,t={title:"Component/Card"},n={render:()=>`
     <style>${a}</style>
     ${e}
   `,parameters:{sourceCode:[{name:"HTML",code:e},{name:"CSS",code:a}]}};n.parameters={...n.parameters,docs:{...n.parameters?.docs,source:{originalSource:`{
@@ -473,4 +473,4 @@
       code: cssEvent
     }]
   }
-}`,...n.parameters?.docs?.source}}};const d=["Event"];export{n as Event,d as __namedExportsOrder,s as default};
+}`,...n.parameters?.docs?.source}}};const s=["Event"];export{n as Event,s as __namedExportsOrder,t as default};

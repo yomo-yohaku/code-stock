@@ -1,4 +1,4 @@
-/* empty css                */const a=`<header class="l-header">
+const a=`<header class="l-header">
   <div class="l-header__container">
     <h1 class="l-header__heading">
       <a href="#" class="l-header__heading-link">
@@ -512,7 +512,7 @@ const initializeHeaderHoverDropdown = () => {
   });
 };
 initializeHeaderHoverDropdown();
-`,l={title:"Layout/Header"},n={render:()=>{const e=document.createElement("div");return e.innerHTML=`
+`,i={title:"Layout/Header"},n={render:()=>{const e=document.createElement("div");return e.innerHTML=`
       <style>${t}</style>
       ${a}
     `,requestAnimationFrame(()=>{new Function(r)()}),e},parameters:{sourceCode:[{name:"HTML",code:a},{name:"CSS",code:t},{name:"JavaScript",code:r}]}};n.parameters={...n.parameters,docs:{...n.parameters?.docs,source:{originalSource:`{
@@ -539,4 +539,4 @@ initializeHeaderHoverDropdown();
       code: jsHeader01
     }]
   }
-}`,...n.parameters?.docs?.source}}};const s=["Header01"];export{n as Header01,s as __namedExportsOrder,l as default};
+}`,...n.parameters?.docs?.source}}};const l=["Header01"];export{n as Header01,l as __namedExportsOrder,i as default};

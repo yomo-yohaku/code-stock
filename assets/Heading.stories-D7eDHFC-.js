@@ -1,0 +1,262 @@
+const e=`<div class="tw:flex tw:flex-col tw:gap-[40px] tw:p-[16px] tw:bg-orange-50">
+  <h2 class="c-heading-title01">見出しのデザイン</h2>
+
+  <h2 class="c-heading-title01-02">見出しのデザイン</h2>
+
+  <h2 class="c-heading-title02">見出しのデザイン</h2>
+
+  <h2 class="c-heading-title03">見出しのデザイン</h2>
+
+  <h2 class="c-heading-title03-02">見出しのデザイン</h2>
+
+  <h2 class="c-heading-title04">見出しのデザイン</h2>
+
+  <h2 class="c-heading-title05">見出しのデザイン</h2>
+
+  <h2 class="c-heading-title05-02">見出しのデザイン</h2>
+
+  <h2 class="c-heading-title06">見出しのデザイン</h2>
+
+  <h2 class="c-heading-title06-02">見出しのデザイン</h2>
+
+  <h2 class="c-heading-title07">見出しのデザイン</h2>
+
+  <h2 class="c-heading-title08">
+    <span class="en">Heading design</span>
+    <span class="ja">見出しのデザイン</span>
+  </h2>
+
+  <h2 class="c-heading-title09">見出しのデザイン</h2>
+
+  <h2 class="c-heading-title10">
+    見出しのデザイン見出しのデザイン見出しのデザイン見出しのデザイン見出しのデザイン見出しのデザイン
+  </h2>
+</div>
+`,t=`.c-heading-title01 {
+  padding: 8px 16px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #ff6900;
+  border-radius: 8px;
+}
+
+.c-heading-title01-02 {
+  position: relative;
+  padding: 8px 16px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #ff6900;
+  border-radius: 8px;
+}
+
+.c-heading-title01-02::before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 16px;
+  height: 12px;
+  content: "";
+  background-color: #ff6900;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  transform: translate(-50%, 100%);
+}
+
+.c-heading-title02 {
+  padding: 8px 16px;
+  font-size: 20px;
+  font-weight: 700;
+  border-left: 4px solid #ff6900;
+}
+
+.c-heading-title03 {
+  padding-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 2px solid #ff6900;
+}
+
+.c-heading-title03-02 {
+  padding-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  background-image:
+    radial-gradient(circle at center, #ff6900 0, #ff6900 2px, transparent 2px),
+    repeating-linear-gradient(to right, transparent 0, transparent 12px);
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+  background-size: 12px 4px;
+}
+
+.c-heading-title04 {
+  padding: 0 14px;
+  font-size: 20px;
+  font-weight: 700;
+  background-image: linear-gradient(#155dfc 50%, #ff6900 50%);
+  background-repeat: no-repeat;
+  background-size: 4px 100%;
+}
+
+.c-heading-title05 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.c-heading-title05::after {
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin-inline: auto;
+  margin-top: 15px;
+  content: "";
+  background-color: #ff6900;
+}
+
+.c-heading-title05-02 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.c-heading-title05-02::after {
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin-inline: auto;
+  margin-top: 15px;
+  content: "";
+  background: linear-gradient(90deg, #00d5be, #ff2056);
+  border-radius: 100vmax;
+}
+
+.c-heading-title06 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  column-gap: 16px;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.c-heading-title06::before,
+.c-heading-title06::after {
+  min-width: 32px;
+  content: "";
+  border-top: 2px solid #ff6900;
+}
+
+.c-heading-title06-02 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  column-gap: 16px;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.c-heading-title06-02::before,
+.c-heading-title06-02::after {
+  display: block;
+  height: 4px;
+  content: "";
+  background-image:
+    radial-gradient(circle at center, #ff6900 0, #ff6900 2px, transparent 2px),
+    repeating-linear-gradient(to right, transparent 0, transparent 12px);
+  background-repeat: repeat-x;
+  background-position-y: center;
+  background-size: 12px 4px;
+}
+
+.c-heading-title07 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 8px;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff6900;
+}
+
+.c-heading-title07::after {
+  width: 40px;
+  content: "";
+  border-top: 2px solid #ff6900;
+}
+
+.c-heading-title08 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.c-heading-title08 .en {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ff6900;
+  letter-spacing: 0.1em;
+}
+
+.c-heading-title08 .ja {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.c-heading-title09 {
+  display: flex;
+  column-gap: 4px;
+  align-items: flex-start;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.c-heading-title09::before {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  content: "";
+  background-image: url(./assets/images/heading/icon_01.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.c-heading-title10 {
+  display: flex;
+  column-gap: 4px;
+  align-items: flex-start;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.c-heading-title10::before {
+  flex-shrink: 0;
+  width: 20px;
+  aspect-ratio: 1;
+  content: "";
+  background:
+    linear-gradient(135deg, #fad77a 0%, #f3966a 50%, #df6da1 100%), #dda800;
+  border-radius: 100%;
+  filter: blur(1px);
+  transform: translateY(2px);
+}
+`,i={title:"Component/Heading"},n={render:()=>`
+    <style>${t}</style>
+    ${e}
+  `,parameters:{sourceCode:[{name:"HTML",code:e},{name:"CSS",code:t}]}};n.parameters={...n.parameters,docs:{...n.parameters?.docs,source:{originalSource:`{
+  render: () => \`
+    <style>\${cssTitle}</style>
+    \${title}
+  \`,
+  parameters: {
+    sourceCode: [{
+      name: "HTML",
+      code: title
+    }, {
+      name: "CSS",
+      code: cssTitle
+    }]
+  }
+}`,...n.parameters?.docs?.source}}};const a=["Title"];export{n as Title,a as __namedExportsOrder,i as default};

@@ -1,4 +1,4 @@
-/* empty css                */import{S as i}from"./splide.esm-nHf3Xtr5.js";import{c as t}from"./index-DPIsAUKd.js";const a=`<div class="tw:bg-slate-200 tw:p-[16px] tw:md:p-[40px]">
+import{S as i}from"./splide.esm-nHf3Xtr5.js";import{c as t}from"./index-DPIsAUKd.js";const a=`<div class="tw:bg-slate-200 tw:p-[16px] tw:md:p-[40px]">
   <p
     class="tw:font-bold tw:text-[16px] tw:md:text-[24px] tw:mb-[16px] tw:md:mb-[24px] tw:text-center"
   >
@@ -924,7 +924,7 @@ const slider02_options = {
 };
 const slider02 = new Splide(slider02_selector, slider02_options);
 slider02.mount();
-`,_={title:"Project/Slider"},n={render:()=>{const e=document.createElement("div");return e.innerHTML=`
+`,l={title:"Project/Slider"},n={render:()=>{const e=document.createElement("div");return e.innerHTML=`
       <style>
         ${t}
         ${s}
@@ -958,4 +958,4 @@ slider02.mount();
       code: jsSplideSlider
     }]
   }
-}`,...n.parameters?.docs?.source}}};const p=["SplideSlider"];export{n as SplideSlider,p as __namedExportsOrder,_ as default};
+}`,...n.parameters?.docs?.source}}};const _=["SplideSlider"];export{n as SplideSlider,_ as __namedExportsOrder,l as default};

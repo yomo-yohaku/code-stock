@@ -1,4 +1,4 @@
-/* empty css                */const o=`<div class="tw:flex tw:flex-col tw:gap-[16px] tw:m-[16px]">
+import{c as s}from"./index-B7OfYWdg.js";const o=`<div class="tw:flex tw:flex-col tw:gap-[16px] tw:m-[16px]">
   <div class="tw:max-w-[320px]">
     <a href="#" class="c-button-brightness">テキスト</a>
   </div>
@@ -11,9 +11,10 @@
     <a href="#" target="_blank" class="c-button-brightness">テキスト</a>
   </div>
 </div>
-`,s=`.c-button-brightness {
+`,i=`.c-button-brightness {
   display: grid;
   justify-content: center;
+  width: 100%;
   padding: 24px;
   font-size: 16px;
   font-weight: 700;
@@ -75,7 +76,7 @@
     filter: brightness(1.25);
   }
 }
-`,i=`<div class="tw:flex tw:flex-col tw:gap-[16px] tw:m-[16px]">
+`,a=`<div class="tw:flex tw:flex-col tw:gap-[16px] tw:m-[16px]">
   <div class="tw:max-w-[320px]">
     <a href="#" class="c-button-inversion">テキスト</a>
   </div>
@@ -84,54 +85,6 @@
     <a href="#" class="c-button-inversion --arrow">テキスト</a>
   </div>
 </div>
-`,a=`.c-button-inversion {
-  display: grid;
-  justify-content: center;
-  padding: 24px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #ff6900;
-  background-color: #fff;
-  border: 1px solid #ff6900;
-  border-radius: 9999px;
-}
-
-.c-button-inversion.--arrow {
-  grid-template-columns: 1fr auto 1fr;
-  column-gap: 8px;
-  align-items: center;
-}
-
-.c-button-inversion.--arrow::before {
-  content: "";
-}
-
-.c-button-inversion.--arrow::after {
-  justify-self: end;
-  width: 16px;
-  height: 16px;
-  content: "";
-  background-color: #ff6900;
-  mask-image: url("./assets/images/common/icon_arrow_right.svg");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
-}
-
-@media (any-hover: hover) {
-  .c-button-inversion {
-    transition: background-color 0.3s;
-  }
-
-  .c-button-inversion:hover {
-    color: #fff;
-    background-color: #ff6900;
-  }
-
-  .c-button-inversion.--arrow:hover::after {
-    background-color: #fff;
-  }
-}
 `,c=`<div class="tw:flex tw:flex-col tw:gap-[16px] tw:m-[16px]">
   <div class="tw:max-w-[320px]">
     <a href="#" class="c-button-gradation"> テキストテキストテキスト </a>
@@ -143,7 +96,7 @@
     </a>
   </div>
 </div>
-`,l=`.c-button-gradation {
+`,p=`.c-button-gradation {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   column-gap: 8px;
@@ -197,7 +150,7 @@
     #155dfc 100%
   );
 }
-`,p=`<div
+`,l=`<div
   class="tw:flex tw:flex-col tw:gap-[32px] tw:p-[32px] tw:bg-slate-200 tw:h-screen"
 >
   <div>
@@ -391,19 +344,19 @@
     opacity: 0;
   }
 }
-`,f={title:"Component/Button"},n={render:()=>`
-    <style>${s}</style>
+`,b={title:"Component/Button"},n={render:()=>`
+    <style>${i}</style>
     ${o}
-  `,parameters:{sourceCode:[{name:"HTML",code:o},{name:"CSS",code:s}]}},e={render:()=>`
-    <style>${a}</style>
-    ${i}
-  `,parameters:{sourceCode:[{name:"HTML",code:i},{name:"CSS",code:a}]}},t={render:()=>`
-    <style>${l}</style>
+  `,parameters:{sourceCode:[{name:"HTML",code:o},{name:"CSS",code:i}]}},e={render:()=>`
+    <style>${s}</style>
+    ${a}
+  `,parameters:{sourceCode:[{name:"HTML",code:a},{name:"CSS",code:s}]}},t={render:()=>`
+    <style>${p}</style>
     ${c}
-  `,parameters:{sourceCode:[{name:"HTML",code:c},{name:"CSS",code:l}]}},r={render:()=>`
+  `,parameters:{sourceCode:[{name:"HTML",code:c},{name:"CSS",code:p}]}},r={render:()=>`
     <style>${d}</style>
-    ${p}
-  `,parameters:{sourceCode:[{name:"HTML",code:p},{name:"CSS",code:d}]}};n.parameters={...n.parameters,docs:{...n.parameters?.docs,source:{originalSource:`{
+    ${l}
+  `,parameters:{sourceCode:[{name:"HTML",code:l},{name:"CSS",code:d}]}};n.parameters={...n.parameters,docs:{...n.parameters?.docs,source:{originalSource:`{
   render: () => \`
     <style>\${cssBrightness}</style>
     \${brightness}
@@ -459,4 +412,4 @@
       code: cssRipples
     }]
   }
-}`,...r.parameters?.docs?.source}}};const b=["Brightness","Inversion","Gradation","Ripples"];export{n as Brightness,t as Gradation,e as Inversion,r as Ripples,b as __namedExportsOrder,f as default};
+}`,...r.parameters?.docs?.source}}};const f=["Brightness","Inversion","Gradation","Ripples"];export{n as Brightness,t as Gradation,e as Inversion,r as Ripples,f as __namedExportsOrder,b as default};

@@ -1,4 +1,4 @@
-/* empty css                */const l=`<div class="tw:bg-slate-200 tw:p-[32px] tw:md:p-[40px]">
+const l=`<div class="tw:bg-slate-200 tw:p-[32px] tw:md:p-[40px]">
   <p
     class="tw:font-bold tw:text-[16px] tw:md:text-[24px] tw:mb-[16px] tw:md:mb-[24px] tw:text-center"
   >
@@ -211,7 +211,7 @@
   left: 0;
   content: "・";
 }
-`,p={title:"Project/Table"},n={render:()=>`
+`,t={title:"Project/Table"},n={render:()=>`
     <style>${e}</style>
     ${l}
   `,parameters:{sourceCode:[{name:"HTML",code:l},{name:"CSS",code:e}]}};n.parameters={...n.parameters,docs:{...n.parameters?.docs,source:{originalSource:`{
@@ -228,4 +228,4 @@
       code: cssProfile
     }]
   }
-}`,...n.parameters?.docs?.source}}};const i=["Profile"];export{n as Profile,i as __namedExportsOrder,p as default};
+}`,...n.parameters?.docs?.source}}};const p=["Profile"];export{n as Profile,p as __namedExportsOrder,t as default};

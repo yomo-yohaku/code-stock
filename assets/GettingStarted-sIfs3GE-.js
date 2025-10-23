@@ -18,9 +18,12 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as r}from"./inde
 `,n.jsx(e.hr,{}),`
 `,n.jsx(e.h3,{id:"-更新履歴",children:"📝 更新履歴"}),`
 `,n.jsxs(e.ul,{children:[`
+`,n.jsx(e.li,{children:"✨ 2025-10-23: 「COMPONENT ＞ Text ＞ Deco」を追加"}),`
+`,n.jsx(e.li,{children:"✨ 2025-10-22: 「PROJECT ＞ Modal ＞ Modal01」を追加"}),`
+`,n.jsx(e.li,{children:"✨ 2025-10-21: 「COMPONENT ＞ Heading ＞ Title」を追加"}),`
 `,n.jsx(e.li,{children:"✨ 2025-10-10: 「PROJECT ＞ Table ＞ Profile」を追加"}),`
 `,n.jsx(e.li,{children:"✨ 2025-10-10: 「COMPONENT ＞ Button ＞ Ripples」を追加"}),`
-`,n.jsx(e.li,{children:"⚡️ 2025-10-08: 「COMPONENT ＞ Text ＞ Flowing」をSplideに変更"}),`
+`,n.jsx(e.li,{children:"⚡️ 2025-10-08: 「COMPONENT ＞ Text ＞ Flowing」にSplideを追加"}),`
 `,n.jsx(e.li,{children:"✨ 2025-09-24: 「COMPONENT ＞ Text ＞ Link」を追加"}),`
 `,n.jsx(e.li,{children:"✨ 2025-09-22: 「COMPONENT ＞ Text ＞ Flowing」を追加"}),`
 `,n.jsx(e.li,{children:"✨ 2025-09-18: 「PROJECT ＞ Section ＞ RightOver」を追加"}),`
@@ -29,4 +32,18 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as r}from"./inde
 `,n.jsx(e.li,{children:"✨ 2025-09-05: 「PROJECT ＞ Kv ＞ Splide Kv」を追加"}),`
 `,n.jsx(e.li,{children:"🚀 2025-09-01: 「Code Stock」を公開"}),`
 `]}),`
-`,n.jsx(e.hr,{})]})}function t(i={}){const{wrapper:e}={...r(),...i.components};return e?n.jsx(e,{...i,children:n.jsx(l,{...i})}):l(i)}export{t as default};
+`,n.jsx(e.hr,{}),`
+`,n.jsx(e.h3,{id:"️-今後の追加更新予定",children:"🗂️ 今後の追加・更新予定"}),`
+`,n.jsxs(e.ul,{children:[`
+`,n.jsx(e.li,{children:"「COMPONENT ＞ Button」のバリエーション"}),`
+`,n.jsx(e.li,{children:"「LAYOUT ＞ Header ＞ Header01」のリファクタリング"}),`
+`,n.jsx(e.li,{children:"「PROJECT ＞ Kv ＞ Splide Kv」のリファクタリング"}),`
+`,n.jsx(e.li,{children:"アコーディオンの追加"}),`
+`,n.jsx(e.li,{children:"ドロップダウンメニューの追加"}),`
+`,n.jsx(e.li,{children:"ハンバーガーメニューの追加"}),`
+`,n.jsx(e.li,{children:"タブメニューの追加"}),`
+`,n.jsx(e.li,{children:"スムーススクロールの追加"}),`
+`,n.jsx(e.li,{children:"Intersection Observer（JSでのスクロール連動エフェクト）の追加"}),`
+`,n.jsx(e.li,{children:"GSAPを使ったパーツの追加"}),`
+`]}),`
+`,n.jsx(e.hr,{})]})}function d(i={}){const{wrapper:e}={...r(),...i.components};return e?n.jsx(e,{...i,children:n.jsx(l,{...i})}):l(i)}export{d as default};
