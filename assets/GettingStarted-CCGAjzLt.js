@@ -18,6 +18,8 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as r}from"./inde
 `,n.jsx(e.hr,{}),`
 `,n.jsx(e.h3,{id:"-更新履歴",children:"📝 更新履歴"}),`
 `,n.jsxs(e.ul,{children:[`
+`,n.jsx(e.li,{children:"✨ 2025-10-24: 「COMPONENT ＞ Background ＞ Texture」を追加"}),`
+`,n.jsx(e.li,{children:"✨ 2025-10-24: 「COMPONENT ＞ Background ＞ Pattern」を追加"}),`
 `,n.jsx(e.li,{children:"✨ 2025-10-23: 「COMPONENT ＞ Text ＞ Deco」を追加"}),`
 `,n.jsx(e.li,{children:"✨ 2025-10-22: 「PROJECT ＞ Modal ＞ Modal01」を追加"}),`
 `,n.jsx(e.li,{children:"✨ 2025-10-21: 「COMPONENT ＞ Heading ＞ Title」を追加"}),`
@@ -45,5 +47,9 @@ import{j as n}from"./index-C8ADKtso.js";import{useMDXComponents as r}from"./inde
 `,n.jsx(e.li,{children:"スムーススクロールの追加"}),`
 `,n.jsx(e.li,{children:"Intersection Observer（JSでのスクロール連動エフェクト）の追加"}),`
 `,n.jsx(e.li,{children:"GSAPを使ったパーツの追加"}),`
+`,n.jsx(e.li,{children:"セクションの区切り（波型、斜めカットなど）"}),`
+`,n.jsx(e.li,{children:"スライドショー（Splide）"}),`
+`,n.jsx(e.li,{children:"追従バナー"}),`
+`,n.jsx(e.li,{children:"アニメーションするイラスト"}),`
 `]}),`
-`,n.jsx(e.hr,{})]})}function d(i={}){const{wrapper:e}={...r(),...i.components};return e?n.jsx(e,{...i,children:n.jsx(l,{...i})}):l(i)}export{d as default};
+`,n.jsx(e.hr,{})]})}function c(i={}){const{wrapper:e}={...r(),...i.components};return e?n.jsx(e,{...i,children:n.jsx(l,{...i})}):l(i)}export{c as default};

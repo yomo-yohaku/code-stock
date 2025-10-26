@@ -3,7 +3,7 @@ import{S as En}from"./splide.esm-nHf3Xtr5.js";/*!
  * Version  : 0.5.3
  * License  : MIT
  * Copyright: 2022 Naotoshi Fujita
- */function Sn(n){n.length=0}function V(n,t,e){return Array.prototype.slice.call(n,t,e)}function L(n){return n.bind.apply(n,[null].concat(V(arguments,1)))}function B(n){return requestAnimationFrame(n)}function I(n,t){return typeof t===n}var ln=Array.isArray;L(I,"function");L(I,"string");L(I,"undefined");function dn(n){return ln(n)?n:[n]}function G(n,t){dn(n).forEach(t)}var kn=Object.keys;function Tn(n,t,e){if(n){var i=kn(n);i=i;for(var s=0;s<i.length;s++){var r=i[s];if(r!=="__proto__"&&t(n[r],r)===!1)break}}return n}function On(n){return V(arguments,1).forEach(function(t){Tn(t,function(e,i){n[i]=t[i]})}),n}var An=Math.min;function Cn(){var n=[];function t(c,d,a,f){s(c,d,function(l,p,u){var b="addEventListener"in l,x=b?l.removeEventListener.bind(l,p,a,f):l.removeListener.bind(l,a);b?l.addEventListener(p,a,f):l.addListener(a),n.push([l,p,u,a,x])})}function e(c,d,a){s(c,d,function(f,l,p){n=n.filter(function(u){return u[0]===f&&u[1]===l&&u[2]===p&&(!a||u[3]===a)?(u[4](),!1):!0})})}function i(c,d,a){var f,l=!0;return typeof CustomEvent=="function"?f=new CustomEvent(d,{bubbles:l,detail:a}):(f=document.createEvent("CustomEvent"),f.initCustomEvent(d,l,!1,a)),c.dispatchEvent(f),f}function s(c,d,a){G(c,function(f){f&&G(d,function(l){l.split(" ").forEach(function(p){var u=p.split(".");a(f,u[0],u[1])})})})}function r(){n.forEach(function(c){c[4]()}),Sn(n)}return{bind:t,unbind:e,dispatch:i,destroy:r}}var J="move",X="moved",Ln="updated",U="drag",Dn="dragged",W="scroll",Y="scrolled",$n="destroy";function Fn(n){var t=n?n.event.bus:document.createDocumentFragment(),e=Cn();function i(r,c){e.bind(t,dn(r).join(" "),function(d){c.apply(c,ln(d.detail)?d.detail:[])})}function s(r){e.dispatch(t,r,V(arguments,1))}return n&&n.event.on($n,e.destroy),On(e,{bus:t,on:i,off:L(e.unbind,t),emit:s})}function fn(n,t,e,i){var s=Date.now,r,c=0,d,a=!0,f=0;function l(){if(!a){if(c=n?An((s()-r)/n,1):1,e&&e(c),c>=1&&(t(),r=s(),i&&++f>=i))return u();B(l)}}function p(h){!h&&x(),r=s()-(h?c*n:0),a=!1,B(l)}function u(){a=!0}function b(){r=s(),c=0,e&&e(c)}function x(){d&&cancelAnimationFrame(d),c=0,d=0,a=!0}function S(h){n=h}function y(){return a}return{start:p,rewind:b,pause:u,cancel:x,set:S,isPaused:y}}function zn(n,t){var e;function i(){e||(e=fn(t,function(){n(),e=null},null,1),e.start())}return i}var Mn="is-active",Hn="slide",Nn="fade";function un(n,t,e){return Array.prototype.slice.call(n,t,e)}function K(n){return n.bind(null,...un(arguments,1))}function D(n,t){return typeof t===n}function N(n){return!pn(n)&&D("object",n)}const Vn=Array.isArray;K(D,"function");K(D,"string");const In=K(D,"undefined");function pn(n){return n===null}function Kn(n){return Vn(n)?n:[n]}function C(n,t){Kn(n).forEach(t)}function Pn(n,t,e){n&&C(t,i=>{i&&n.classList[e?"add":"remove"](i)})}const jn=Object.keys;function xn(n,t,e){if(n){let i=jn(n);i=i;for(let s=0;s<i.length;s++){const r=i[s];if(r!=="__proto__"&&t(n[r],r)===!1)break}}return n}function Q(n){return un(arguments,1).forEach(t=>{xn(t,(e,i)=>{n[i]=t[i]})}),n}function qn(n,t){C(n,e=>{C(t,i=>{e&&e.removeAttribute(i)})})}function wn(n,t,e){N(t)?xn(t,(i,s)=>{wn(n,s,i)}):C(n,i=>{pn(e)||e===""?qn(i,t):i.setAttribute(t,String(e))})}const{min:Z,max:nn}=Math;function Rn(n,t,e){const i=Z(t,e),s=nn(t,e);return Z(nn(i,n),s)}const Bn={speed:1,autoStart:!0,pauseOnHover:!0,pauseOnFocus:!0},Gn={startScroll:"Start auto scroll",pauseScroll:"Pause auto scroll"};function Jn(n,t,e){const{on:i,off:s,bind:r,unbind:c}=Fn(n),{translate:d,getPosition:a,toIndex:f,getLimit:l}=t.Move,{setIndex:p,getIndex:u}=t.Controller,{orient:b}=t.Direction,{toggle:x}=t.Elements,{Live:S}=t,{root:y}=n,h=zn(t.Arrows.update,500);let w={},m,g,$,F,z,k;function mn(){const{autoScroll:o}=e;w=Q({},Bn,N(o)?o:{})}function P(){n.is(Nn)||!m&&e.autoScroll!==!1&&(m=fn(0,hn),gn(),bn())}function j(){m&&(m.cancel(),m=null,k=void 0,s([J,U,W,X,Y]),c(y,"mouseenter mouseleave focusin focusout"),c(x,"click"))}function gn(){w.pauseOnHover&&r(y,"mouseenter mouseleave",o=>{$=o.type==="mouseenter",M()}),w.pauseOnFocus&&r(y,"focusin focusout",o=>{F=o.type==="focusin",M()}),w.useToggleButton&&r(x,"click",()=>{g?_():E()}),i(Ln,vn),i([J,U,W],()=>{z=!0,E(!1)}),i([X,Dn,Y],()=>{z=!1,M()})}function vn(){const{autoScroll:o}=e;o!==!1?(w=Q({},w,N(o)?o:{}),P()):j(),m&&!In(k)&&d(k)}function bn(){w.autoStart&&(document.readyState==="complete"?_():r(window,"load",_))}function _(){H()&&(m.start(!0),S.disable(!0),F=$=g=!1,q())}function E(o=!0){g||(g=o,q(),H()||(m.pause(),S.disable(!1)))}function M(){g||($||F||z?E(!1):_())}function hn(){const o=a(),v=yn(o);o!==v?(d(v),_n(k=a())):(E(!1),w.rewind&&n.go(w.speed>0?0:t.Controller.getEnd())),h()}function yn(o){const v=w.speed||1;return o+=b(v),n.is(Hn)&&(o=Rn(o,l(!1),l(!0))),o}function _n(o){const{length:v}=n,R=(f(o)+v)%v;R!==u()&&(p(R),t.Slides.update(),t.Pagination.update(),e.lazyLoad==="nearby"&&t.LazyLoad.check())}function q(){if(x){const o=g?"startScroll":"pauseScroll";Pn(x,Mn,!g),wn(x,"aria-label",e.i18n[o]||Gn[o])}}function H(){return!m||m.isPaused()}return{setup:mn,mount:P,destroy:j,play:_,pause:E,isPaused:H}}const tn=`<div class="tw:py-[40px]">
+ */function kn(n){n.length=0}function V(n,t,e){return Array.prototype.slice.call(n,t,e)}function L(n){return n.bind.apply(n,[null].concat(V(arguments,1)))}function B(n){return requestAnimationFrame(n)}function I(n,t){return typeof t===n}var ln=Array.isArray;L(I,"function");L(I,"string");L(I,"undefined");function dn(n){return ln(n)?n:[n]}function G(n,t){dn(n).forEach(t)}var Sn=Object.keys;function Tn(n,t,e){if(n){var o=Sn(n);o=o;for(var s=0;s<o.length;s++){var r=o[s];if(r!=="__proto__"&&t(n[r],r)===!1)break}}return n}function On(n){return V(arguments,1).forEach(function(t){Tn(t,function(e,o){n[o]=t[o]})}),n}var An=Math.min;function Cn(){var n=[];function t(a,d,c,f){s(a,d,function(l,p,u){var b="addEventListener"in l,x=b?l.removeEventListener.bind(l,p,c,f):l.removeListener.bind(l,c);b?l.addEventListener(p,c,f):l.addListener(c),n.push([l,p,u,c,x])})}function e(a,d,c){s(a,d,function(f,l,p){n=n.filter(function(u){return u[0]===f&&u[1]===l&&u[2]===p&&(!c||u[3]===c)?(u[4](),!1):!0})})}function o(a,d,c){var f,l=!0;return typeof CustomEvent=="function"?f=new CustomEvent(d,{bubbles:l,detail:c}):(f=document.createEvent("CustomEvent"),f.initCustomEvent(d,l,!1,c)),a.dispatchEvent(f),f}function s(a,d,c){G(a,function(f){f&&G(d,function(l){l.split(" ").forEach(function(p){var u=p.split(".");c(f,u[0],u[1])})})})}function r(){n.forEach(function(a){a[4]()}),kn(n)}return{bind:t,unbind:e,dispatch:o,destroy:r}}var X="move",J="moved",Ln="updated",U="drag",Dn="dragged",W="scroll",Y="scrolled",$n="destroy";function Fn(n){var t=n?n.event.bus:document.createDocumentFragment(),e=Cn();function o(r,a){e.bind(t,dn(r).join(" "),function(d){a.apply(a,ln(d.detail)?d.detail:[])})}function s(r){e.dispatch(t,r,V(arguments,1))}return n&&n.event.on($n,e.destroy),On(e,{bus:t,on:o,off:L(e.unbind,t),emit:s})}function fn(n,t,e,o){var s=Date.now,r,a=0,d,c=!0,f=0;function l(){if(!c){if(a=n?An((s()-r)/n,1):1,e&&e(a),a>=1&&(t(),r=s(),o&&++f>=o))return u();B(l)}}function p(h){!h&&x(),r=s()-(h?a*n:0),c=!1,B(l)}function u(){c=!0}function b(){r=s(),a=0,e&&e(a)}function x(){d&&cancelAnimationFrame(d),a=0,d=0,c=!0}function k(h){n=h}function y(){return c}return{start:p,rewind:b,pause:u,cancel:x,set:k,isPaused:y}}function zn(n,t){var e;function o(){e||(e=fn(t,function(){n(),e=null},null,1),e.start())}return o}var Mn="is-active",Hn="slide",Nn="fade";function un(n,t,e){return Array.prototype.slice.call(n,t,e)}function K(n){return n.bind(null,...un(arguments,1))}function D(n,t){return typeof t===n}function N(n){return!pn(n)&&D("object",n)}const Vn=Array.isArray;K(D,"function");K(D,"string");const In=K(D,"undefined");function pn(n){return n===null}function Kn(n){return Vn(n)?n:[n]}function C(n,t){Kn(n).forEach(t)}function Pn(n,t,e){n&&C(t,o=>{o&&n.classList[e?"add":"remove"](o)})}const jn=Object.keys;function xn(n,t,e){if(n){let o=jn(n);o=o;for(let s=0;s<o.length;s++){const r=o[s];if(r!=="__proto__"&&t(n[r],r)===!1)break}}return n}function Q(n){return un(arguments,1).forEach(t=>{xn(t,(e,o)=>{n[o]=t[o]})}),n}function qn(n,t){C(n,e=>{C(t,o=>{e&&e.removeAttribute(o)})})}function wn(n,t,e){N(t)?xn(t,(o,s)=>{wn(n,s,o)}):C(n,o=>{pn(e)||e===""?qn(o,t):o.setAttribute(t,String(e))})}const{min:Z,max:nn}=Math;function Rn(n,t,e){const o=Z(t,e),s=nn(t,e);return Z(nn(o,n),s)}const Bn={speed:1,autoStart:!0,pauseOnHover:!0,pauseOnFocus:!0},Gn={startScroll:"Start auto scroll",pauseScroll:"Pause auto scroll"};function Xn(n,t,e){const{on:o,off:s,bind:r,unbind:a}=Fn(n),{translate:d,getPosition:c,toIndex:f,getLimit:l}=t.Move,{setIndex:p,getIndex:u}=t.Controller,{orient:b}=t.Direction,{toggle:x}=t.Elements,{Live:k}=t,{root:y}=n,h=zn(t.Arrows.update,500);let w={},m,g,$,F,z,S;function mn(){const{autoScroll:i}=e;w=Q({},Bn,N(i)?i:{})}function P(){n.is(Nn)||!m&&e.autoScroll!==!1&&(m=fn(0,hn),gn(),bn())}function j(){m&&(m.cancel(),m=null,S=void 0,s([X,U,W,J,Y]),a(y,"mouseenter mouseleave focusin focusout"),a(x,"click"))}function gn(){w.pauseOnHover&&r(y,"mouseenter mouseleave",i=>{$=i.type==="mouseenter",M()}),w.pauseOnFocus&&r(y,"focusin focusout",i=>{F=i.type==="focusin",M()}),w.useToggleButton&&r(x,"click",()=>{g?_():E()}),o(Ln,vn),o([X,U,W],()=>{z=!0,E(!1)}),o([J,Dn,Y],()=>{z=!1,M()})}function vn(){const{autoScroll:i}=e;i!==!1?(w=Q({},w,N(i)?i:{}),P()):j(),m&&!In(S)&&d(S)}function bn(){w.autoStart&&(document.readyState==="complete"?_():r(window,"load",_))}function _(){H()&&(m.start(!0),k.disable(!0),F=$=g=!1,q())}function E(i=!0){g||(g=i,q(),H()||(m.pause(),k.disable(!1)))}function M(){g||($||F||z?E(!1):_())}function hn(){const i=c(),v=yn(i);i!==v?(d(v),_n(S=c())):(E(!1),w.rewind&&n.go(w.speed>0?0:t.Controller.getEnd())),h()}function yn(i){const v=w.speed||1;return i+=b(v),n.is(Hn)&&(i=Rn(i,l(!1),l(!0))),i}function _n(i){const{length:v}=n,R=(f(i)+v)%v;R!==u()&&(p(R),t.Slides.update(),t.Pagination.update(),e.lazyLoad==="nearby"&&t.LazyLoad.check())}function q(){if(x){const i=g?"startScroll":"pauseScroll";Pn(x,Mn,!g),wn(x,"aria-label",e.i18n[i]||Gn[i])}}function H(){return!m||m.isPaused()}return{setup:mn,mount:P,destroy:j,play:_,pause:E,isPaused:H}}const tn=`<div class="tw:py-[40px]">
   <p
     class="tw:font-bold tw:text-[16px] tw:md:text-[24px] tw:mb-[16px] tw:md:mb-[24px] tw:text-center"
   >
@@ -264,7 +264,7 @@ document.querySelectorAll(".js-text-flowing").forEach((el) => {
     opacity: 0.7;
   }
 }
-`,cn=`<div class="tw:flex tw:flex-col tw:gap-[24px] tw:p-[16px]">
+`,an=`<div class="tw:flex tw:flex-col tw:gap-[24px] tw:p-[16px]">
   <p><span class="c-text-deco-marker">テキスト装飾（マーカー）</span></p>
 
   <p>
@@ -284,8 +284,14 @@ document.querySelectorAll(".js-text-flowing").forEach((el) => {
       テキスト装飾（下から呼びかけるフキダシ）
     </span>
   </p>
+
+  <p class="c-text-deco-topdot">
+    <span class="char">テ</span><span class="char">キ</span
+    ><span class="char">ス</span><span class="char">ト</span
+    ><span class="char">装</span><span class="char">飾</span>（上部にドット）
+  </p>
 </div>
-`,an=`.c-text-deco-marker {
+`,cn=`.c-text-deco-marker {
   background-color: #fff085;
 }
 
@@ -340,16 +346,39 @@ document.querySelectorAll(".js-text-flowing").forEach((el) => {
 .c-text-deco-bubble::after {
   rotate: -60deg;
 }
+
+.c-text-deco-topdot {
+  display: block;
+}
+
+.c-text-deco-topdot .char {
+  position: relative;
+  display: inline-block;
+}
+
+.c-text-deco-topdot .char::before {
+  position: absolute;
+  top: -1.5em;
+  left: 50%;
+  display: block;
+  width: 4px;
+  aspect-ratio: 1;
+  font-size: 0.25em;
+  content: "";
+  background-color: #ff6900;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
 `,Un={title:"Component/Text"},T={render:()=>{const n=document.createElement("div");return n.innerHTML=`
       <style>${en}</style>
       ${tn}
-    `,requestAnimationFrame(()=>{window.Splide=En,window.splide={Extensions:{AutoScroll:Jn}},new Function(on)()}),n},parameters:{sourceCode:[{name:"HTML",code:tn},{name:"CSS",code:en},{name:"JavaScript",code:on}]}},O={render:()=>`
+    `,requestAnimationFrame(()=>{window.Splide=En,window.splide={Extensions:{AutoScroll:Xn}},new Function(on)()}),n},parameters:{sourceCode:[{name:"HTML",code:tn},{name:"CSS",code:en},{name:"JavaScript",code:on}]}},O={render:()=>`
     <style>${rn}</style>
     ${sn}
   `,parameters:{sourceCode:[{name:"HTML",code:sn},{name:"CSS",code:rn}]}},A={render:()=>`
-    <style>${an}</style>
-    ${cn}
-  `,parameters:{sourceCode:[{name:"HTML",code:cn},{name:"CSS",code:an}]}};T.parameters={...T.parameters,docs:{...T.parameters?.docs,source:{originalSource:`{
+    <style>${cn}</style>
+    ${an}
+  `,parameters:{sourceCode:[{name:"HTML",code:an},{name:"CSS",code:cn}]}};T.parameters={...T.parameters,docs:{...T.parameters?.docs,source:{originalSource:`{
   render: () => {
     const container = document.createElement("div");
     container.innerHTML = \`
