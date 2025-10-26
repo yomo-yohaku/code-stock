@@ -1,0 +1,9 @@
+.c-bg-texture-noise {
+  background-color: #ff8904;
+  background-image: url("./assets/images/background/bg_noise.png");
+  background-repeat: repeat;
+  background-size:
+    100px 100px,
+    auto;
+  background-blend-mode: color-dodge, normal;
+}
